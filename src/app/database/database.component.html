@@ -1,0 +1,84 @@
+<mat-form-field appearance="fill">
+  <mat-label>Global Filter</mat-label>
+  <input matInput (keyup)="applyGlobalFilter($event)" placeholder="Filter">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- Number Column -->
+  <ng-container matColumnDef="number">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Number
+      <input matInput (keyup)="applyIndividualFilter('number', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.number}} </td>
+  </ng-container>
+
+  <!-- Set Column -->
+  <ng-container matColumnDef="set">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Set
+      <input matInput (keyup)="applyIndividualFilter('set', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.set}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name
+      <input matInput (keyup)="applyIndividualFilter('name', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.name}} </td>
+  </ng-container>
+
+  <!-- Initiative Column -->
+  <ng-container matColumnDef="initiative">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Initiative
+      <input matInput (keyup)="applyIndividualFilter('initiative', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.initiative}} </td>
+  </ng-container>
+
+  <!-- Element Column -->
+  <ng-container matColumnDef="element">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Element
+      <input matInput (keyup)="applyIndividualFilter('element', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.element}} </td>
+  </ng-container>
+
+  <!-- Race Column -->
+  <ng-container matColumnDef="race">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Race
+      <input matInput (keyup)="applyIndividualFilter('race', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.race}} </td>
+  </ng-container>
+
+  <!-- Type Column -->
+  <ng-container matColumnDef="type">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Type
+      <input matInput (keyup)="applyIndividualFilter('type', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.type}} </td>
+  </ng-container>
+
+  <!-- Subtype Column -->
+  <ng-container matColumnDef="subtype">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Subtype
+      <input matInput (keyup)="applyIndividualFilter('subtype', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.subtype}} </td>
+  </ng-container>
+
+  <!-- Ability Column -->
+  <ng-container matColumnDef="ability">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Ability
+      <input matInput (keyup)="applyIndividualFilter('ability', $event)" placeholder="Filter">
+    </th>
+    <td mat-cell *matCellDef="let card"> {{card.ability}} </td>
+  </ng-container>
+
+  <!-- Column definitions end here -->
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

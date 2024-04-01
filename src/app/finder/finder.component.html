@@ -1,0 +1,27 @@
+<mat-sidenav-container class="app-sidenav-container" autosize>
+  <mat-sidenav class="app-sidenav" #drawer mode="side" opened="true">
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Filters</span>
+    </mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-sidenav-content">
+    <mat-toolbar color="primary" class="app-sidenav-toolbar">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Anachronism</span>
+    </mat-toolbar>
+    <main class="app-main">
+      <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
+        <div class="flexbox-item" fxFlex="20" fxFlex.xs="33" *ngFor="let card of cards">
+          <mat-card class="anachronism-card">
+            <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
+          </mat-card>
+        </div>
+      </div>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

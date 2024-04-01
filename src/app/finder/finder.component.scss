@@ -1,0 +1,32 @@
+.app-sidenav-container {
+  width: 100vw;
+  height: 100%;
+
+  .app-sidenav {
+    width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .app-sidenav-content{
+    overflow: hidden;
+
+    .app-sidenav-toolbar {
+      
+    }
+
+    .app-main {
+      height: 100%;
+
+      .flexbox-container {
+        padding: 5px;
+        height: calc(100% - 64px);
+        overflow: hidden auto;
+      
+        .flexbox-item {
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
