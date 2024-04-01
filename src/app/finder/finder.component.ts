@@ -41,6 +41,8 @@ export class FinderComponent {
   cards: Card[] = cards;
 
   filters: FormGroup;
+  search: FormGroup;
+
   cultures: string[] = [];
   types: string[] = [];
   subtypes: string[] = [];
@@ -51,33 +53,49 @@ export class FinderComponent {
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
 
     this.filters = this.formBuilder.group({
-      filteredName: this.formBuilder.control(''),
-      filteredText: this.formBuilder.control(''),
-      filteredCultures: this.formBuilder.control([]),
-      filteredTypes: this.formBuilder.control([]),
-      filteredSubtypes: this.formBuilder.control([]),
+      name: this.formBuilder.control(''),
+      text: this.formBuilder.control(''),
+      cultures: this.formBuilder.control([]),
+      types: this.formBuilder.control([]),
+      subtypes: this.formBuilder.control([]),
     });
 
+    this.search = this.formBuilder.group({
+      query: this.formBuilder.control(''),
+    });
+
+    this.resetAll();
+  }
+
+  resetAll() {
     this.resetFilters();
+    this.resetSearch();
   }
 
   resetFilters() {
     this.filters.patchValue({
-      'filteredName': '',
-      'filteredText': '',
-      'filteredCultures': [],
-      'filteredTypes': [],
-      'filteredSubtypes': []
+      'name': '',
+      'text': '',
+      'cultures': [],
+      'types': [],
+      'subtypes': []
+    });
+  }
+
+  resetSearch() {
+    this.search.patchValue({
+      'query': ''
     });
   }
 
   filteredCards(): Card[] {
     return this.cards
-      .filter(card => card.name.toLowerCase().includes(this.filters.get('filteredName')?.value.toLowerCase()))
-      .filter(card => card.text.toLowerCase().includes(this.filters.get('filteredText')?.value.toLowerCase()))
-      .filter(card => this.filters.get('filteredCultures')?.value.length > 0 ? this.filters.get('filteredCultures')?.value.includes(card.culture) : true)
-      .filter(card => this.filters.get('filteredTypes')?.value.length > 0 ? this.filters.get('filteredTypes')?.value.includes(card.type) : true)
-      .filter(card => this.filters.get('filteredSubtypes')?.value.length > 0 ? this.filters.get('filteredSubtypes')?.value.includes(card.subtype) : true);
+      .filter(card => card.name.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()))
+      .filter(card => card.name.toLowerCase().includes(this.filters.get('name')?.value.toLowerCase()))
+      .filter(card => card.text.toLowerCase().includes(this.filters.get('text')?.value.toLowerCase()))
+      .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
+      .filter(card => this.filters.get('types')?.value.length > 0 ? this.filters.get('types')?.value.includes(card.type) : true)
+      .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true);
   }
 
 }

@@ -3,7 +3,7 @@
   height: 100%;
 
   .app-sidenav {
-    width: 300px;
+    width: 350px;
     box-sizing: border-box;
     height: 100%;
 
@@ -21,10 +21,6 @@
   
         mat-form-field {
           width: 100%;
-  
-          ::ng-deep .mat-mdc-form-field-subscript-wrapper {
-            display: none;
-          }
         }
   
         label {
@@ -42,7 +38,15 @@
     overflow: hidden;
 
     .app-sidenav-toolbar {
-      
+      .search-container {
+        width: 100%;
+        form {
+          width: 100%;
+          mat-form-field {
+            width: 100%;
+          }
+        }
+      }
     }
 
     .app-main {
@@ -64,4 +68,8 @@
 .flex-separator {
   flex: 1;
   text-align: right;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none;
 }

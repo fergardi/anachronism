@@ -2,9 +2,9 @@
   <mat-sidenav class="app-sidenav" #drawer mode="side" opened="true">
     <mat-toolbar>
       <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
+        <mat-icon class="primary-color">menu</mat-icon>
       </button>
-      <span>Filters</span>
+      <h3 class="primary-color">Filters</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
         <mat-icon>clear</mat-icon>
@@ -14,30 +14,30 @@
       <div class="filter-container">
         <label>Name:</label>
         <mat-form-field appareance="outline">
-          <input matInput placeholder="Name" formControlName="filteredName"/>
+          <input matInput placeholder="Name" formControlName="name"/>
         </mat-form-field>
       </div>
       <div class="filter-container">
         <label>Text:</label>
         <mat-form-field appareance="outline">
-          <textarea matInput placeholder="Text" formControlName="filteredText"></textarea>
+          <textarea matInput placeholder="Text" formControlName="text"></textarea>
         </mat-form-field>
       </div>
       <div class="filter-container">
         <label>Culture(s):</label>
-        <mat-chip-listbox multiple formControlName="filteredCultures">
+        <mat-chip-listbox multiple formControlName="cultures">
           <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
         <label>Type(s):</label>
-        <mat-chip-listbox multiple formControlName="filteredTypes">
+        <mat-chip-listbox multiple formControlName="types">
           <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
         <label>Subtype(s):</label>
-        <mat-chip-listbox multiple formControlName="filteredSubtypes">
+        <mat-chip-listbox multiple formControlName="subtypes">
           <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
@@ -47,15 +47,35 @@
     </form>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
-    <mat-toolbar class="app-sidenav-toolbar">
-      <button mat-icon-button (click)="drawer.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>Anachronism Card List ({{ filteredCards().length }}/{{ cards.length }})</span>
+    <mat-toolbar class="app-sidenav-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon class="primary-color">menu</mat-icon>
+        </button>
+        <span class="primary-color mat-subtitle-1">Cards ({{ filteredCards().length }}/{{ cards.length }})</span>
+      </div>
+      <div fxFlex="40">
+        <div class="search-container">
+          <form [formGroup]="search">
+            <mat-form-field appareance="outline">
+              <mat-icon matPrefix>search</mat-icon>
+              <input matInput placeholder="Quick search" formControlName="query"/>
+              <button matSuffix mat-icon-button (click)="resetSearch()">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      <div fxFlex="20" fxLayout="row" fxLayoutAlign="space-evenly center">
+        <button mat-stroked-button color="primary"><mat-icon>database</mat-icon>Database</button>
+        <button mat-stroked-button color="primary"><mat-icon>auto_stories</mat-icon>Finder</button>
+        <button mat-stroked-button color="primary"><mat-icon>stacks</mat-icon>Builder</button>
+      </div>
     </mat-toolbar>
     <main class="app-main">
       <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
-        <div class="flexbox-item" fxFlex="20" fxFlex.xs="33" *ngFor="let card of filteredCards()">
+        <div class="flexbox-item" fxFlex.xl="12.5" fxFlex.lg="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" *ngFor="let card of filteredCards()">
           <mat-card class="anachronism-card">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
