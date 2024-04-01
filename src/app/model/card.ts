@@ -38483,7 +38483,7 @@ export const cards: Card[] = [
   },
   {
     name: "Carlos V",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Warrior",
     subtype: "Male",
     initiative: null,
@@ -38557,7 +38557,7 @@ export const cards: Card[] = [
   },
   {
     name: "Mercurino Gattinara",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Ally",
     initiative: 1,
@@ -38631,7 +38631,7 @@ export const cards: Card[] = [
   },
   {
     name: "Mercurino Gattinara",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Male",
     initiative: 1,
@@ -38705,7 +38705,7 @@ export const cards: Card[] = [
   },
   {
     name: "Albarda Espanola",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Weapon",
     subtype: "Polearm",
     initiative: 7,
@@ -38779,7 +38779,7 @@ export const cards: Card[] = [
   },
   {
     name: "Escudo de Carlos V",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Armor",
     subtype: "Shield",
     initiative: 6,
@@ -38853,7 +38853,7 @@ export const cards: Card[] = [
   },
   {
     name: "Ballestero Vasco",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Ally",
     initiative: 7,
@@ -38927,7 +38927,7 @@ export const cards: Card[] = [
   },
   {
     name: "El Cid",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Warrior",
     subtype: "Male",
     initiative: null,
@@ -39001,7 +39001,7 @@ export const cards: Card[] = [
   },
   {
     name: "Santiago Matamoros",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Ally",
     initiative: 1,
@@ -39075,7 +39075,7 @@ export const cards: Card[] = [
   },
   {
     name: "Santiago Matamoros",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Male",
     initiative: 1,
@@ -39149,7 +39149,7 @@ export const cards: Card[] = [
   },
   {
     name: "Tizona y Colada",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Weapon",
     subtype: "Sword",
     initiative: 6,
@@ -39223,7 +39223,7 @@ export const cards: Card[] = [
   },
   {
     name: "Cota Corta",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Armor",
     subtype: "Torso",
     initiative: 0,
@@ -39297,7 +39297,7 @@ export const cards: Card[] = [
   },
   {
     name: "Babieca",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Cavalry",
     initiative: 2,
@@ -39371,7 +39371,7 @@ export const cards: Card[] = [
   },
   {
     name: "El Gran Capitan",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Warrior",
     subtype: "Male",
     initiative: null,
@@ -39445,7 +39445,7 @@ export const cards: Card[] = [
   },
   {
     name: "Vasallo de la Reina",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Title",
     initiative: 3,
@@ -39519,7 +39519,7 @@ export const cards: Card[] = [
   },
   {
     name: "Pica de Infante",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Weapon",
     subtype: "Polearm",
     initiative: 4,
@@ -39593,7 +39593,7 @@ export const cards: Card[] = [
   },
   {
     name: "Armadura Completa",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Armor",
     subtype: "Torso",
     initiative: 2,
@@ -39667,7 +39667,7 @@ export const cards: Card[] = [
   },
   {
     name: "Formacion de Piqueros",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Ability",
     initiative: 4,
@@ -39741,7 +39741,7 @@ export const cards: Card[] = [
   },
   {
     name: "Hernan Cortes",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Warrior",
     subtype: "Male",
     initiative: null,
@@ -39815,7 +39815,7 @@ export const cards: Card[] = [
   },
   {
     name: "La Malinche",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Female",
     initiative: 6,
@@ -39889,7 +39889,7 @@ export const cards: Card[] = [
   },
   {
     name: "Arcabuz",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Weapon",
     subtype: "Ranged",
     initiative: 8,
@@ -39963,7 +39963,7 @@ export const cards: Card[] = [
   },
   {
     name: "Hombreras",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Armor",
     subtype: "Arms",
     initiative: 4,
@@ -40037,7 +40037,7 @@ export const cards: Card[] = [
   },
   {
     name: "Oro Azteca",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Quest",
     initiative: 4,
@@ -40111,7 +40111,7 @@ export const cards: Card[] = [
   },
   {
     name: "Isabella I of Castile",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Warrior",
     subtype: "Female",
     initiative: null,
@@ -40185,7 +40185,7 @@ export const cards: Card[] = [
   },
   {
     name: "Fernando II de Aragon",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Ally",
     initiative: 7,
@@ -40259,7 +40259,7 @@ export const cards: Card[] = [
   },
   {
     name: "Fernando II de Aragon",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Male",
     initiative: 7,
@@ -40333,7 +40333,7 @@ export const cards: Card[] = [
   },
   {
     name: "Ropera Toledana",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Weapon",
     subtype: "Sword",
     initiative: 3,
@@ -40407,7 +40407,7 @@ export const cards: Card[] = [
   },
   {
     name: "Fervor Religioso",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Armor",
     subtype: "Ability",
     initiative: 8,
@@ -40481,7 +40481,7 @@ export const cards: Card[] = [
   },
   {
     name: "La Inquisicion Espanola",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Quest",
     initiative: 7,
@@ -63051,7 +63051,7 @@ export const cards: Card[] = [
   },
   {
     name: "Reconquista",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Quest",
     initiative: 7,
@@ -63061,7 +63061,7 @@ export const cards: Card[] = [
     experience: null,
     damage: null,
     hands: 0,
-    text: "Patiotismo: If all your cards are Spainish, your rolls gain +1.",
+    text: "Patiotismo: If all your cards are Spanish, your rolls gain +1.",
     set: "P6",
     number: "046",
     reveal: false,
@@ -63125,7 +63125,7 @@ export const cards: Card[] = [
   },
   {
     name: "Tomas de Torquemada",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Ally",
     initiative: 6,
@@ -63199,7 +63199,7 @@ export const cards: Card[] = [
   },
   {
     name: "Tomas de Torquemada",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Special",
     subtype: "Male",
     initiative: 6,
@@ -63643,7 +63643,7 @@ export const cards: Card[] = [
   },
   {
     name: "Unicornio Cuerno",
-    culture: "Spainish",
+    culture: "Spanish",
     type: "Inspiration",
     subtype: "Item",
     initiative: 8,

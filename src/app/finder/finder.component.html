@@ -1,22 +1,61 @@
 <mat-sidenav-container class="app-sidenav-container" autosize>
   <mat-sidenav class="app-sidenav" #drawer mode="side" opened="true">
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       <span>Filters</span>
+      <span class="flex-separator"></span>
+      <button mat-icon-button (click)="resetFilters()">
+        <mat-icon>clear</mat-icon>
+      </button>
     </mat-toolbar>
+    <form [formGroup]="filters" class="sidenav-filters">
+      <div class="filter-container">
+        <label>Name:</label>
+        <mat-form-field appareance="outline">
+          <input matInput placeholder="Name" formControlName="filteredName"/>
+        </mat-form-field>
+      </div>
+      <div class="filter-container">
+        <label>Text:</label>
+        <mat-form-field appareance="outline">
+          <textarea matInput placeholder="Text" formControlName="filteredText"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="filter-container">
+        <label>Culture(s):</label>
+        <mat-chip-listbox multiple formControlName="filteredCultures">
+          <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label>Type(s):</label>
+        <mat-chip-listbox multiple formControlName="filteredTypes">
+          <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label>Subtype(s):</label>
+        <mat-chip-listbox multiple formControlName="filteredSubtypes">
+          <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div>
+        {{ filters.value | json }}
+      </div>
+    </form>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
-    <mat-toolbar color="primary" class="app-sidenav-toolbar">
+    <mat-toolbar class="app-sidenav-toolbar">
       <button mat-icon-button (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>Anachronism</span>
+      <span>Anachronism Card List ({{ filteredCards().length }}/{{ cards.length }})</span>
     </mat-toolbar>
     <main class="app-main">
       <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
-        <div class="flexbox-item" fxFlex="20" fxFlex.xs="33" *ngFor="let card of cards">
+        <div class="flexbox-item" fxFlex="20" fxFlex.xs="33" *ngFor="let card of filteredCards()">
           <mat-card class="anachronism-card">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
