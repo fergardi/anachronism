@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,7 +15,7 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
-import {Card, cards} from '../model/card';
+import { Card, cards, empty} from '../model/card';
 
 @Component({
   selector: 'app-finder',
@@ -33,12 +34,15 @@ import {Card, cards} from '../model/card';
     MatChipsModule,
     ReactiveFormsModule,
     JsonPipe,
+    CdkDropList, 
+    CdkDrag,
   ],
   templateUrl: './finder.component.html',
   styleUrl: './finder.component.scss'
 })
 export class FinderComponent {
   cards: Card[] = cards;
+  deck: Card[] = [];
 
   filters: FormGroup;
   search: FormGroup;
@@ -70,6 +74,7 @@ export class FinderComponent {
   resetAll() {
     this.resetFilters();
     this.resetSearch();
+    this.resetDeck();
   }
 
   resetFilters() {
@@ -96,6 +101,15 @@ export class FinderComponent {
       .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
       .filter(card => this.filters.get('types')?.value.length > 0 ? this.filters.get('types')?.value.includes(card.type) : true)
       .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true);
+  }
+
+  resetDeck() {
+    // this.deck = [empty, empty, empty, empty, empty];
+    this.deck = cards.slice(0, 5);
+  }
+
+  drop(event: CdkDragDrop<Card[]>) {
+    moveItemInArray(this.deck, event.previousIndex, event.currentIndex);
   }
 
 }

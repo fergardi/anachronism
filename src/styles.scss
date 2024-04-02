@@ -10,7 +10,6 @@
 @include mat.core();
 
 /* For use in src/lib/core/theming/_palette.scss */
-/* For use in src/lib/core/theming/_palette.scss */
 $anachronism-palette: (
   50 : #fdf7e6,
   100 : #faecc1,
@@ -44,6 +43,24 @@ $anachronism-palette: (
   )
 );
 
+$font-normal: 'ElysiumNormal, sans-serif';
+$font-bold: 'ElysiumBold, sans-serif';
+$anachronism-font: mat.define-typography-config(
+  $font-family: $font-normal,
+  $headline-1: mat.define-typography-level(112px, 112px, 300, $font-bold),
+  $headline-2: mat.define-typography-level(56px, 56px, 400, $font-bold),
+  $headline-3: mat.define-typography-level(45px, 48px, 400, $font-bold),
+  $headline-4: mat.define-typography-level(34px, 40px, 400, $font-bold),
+  $headline-5: mat.define-typography-level(24px, 32px, 400, $font-bold),
+  $headline-6: mat.define-typography-level(20px, 32px, 400, $font-bold),
+  $body-1: mat.define-typography-level(14px, 20px, 400, $font-normal),
+  $body-2: mat.define-typography-level(14px, 20px, 400, $font-normal),
+  $subtitle-1: mat.define-typography-level(16px, 28px, 400, $font-normal),
+  $subtitle-2: mat.define-typography-level(16px, 28px, 400, $font-normal),
+  $caption: mat.define-typography-level(12px, 20px, 400, $font-normal),
+  $button: mat.define-typography-level(14px, 14px, 500, $font-normal),
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -61,10 +78,7 @@ $anachronism-theme: mat.define-dark-theme((
     accent: $anachronism-accent,
     warn: $anachronism-warn,
   ),
-  typography: mat.define-typography-config(
-    $font-family: 'ElysiumNormal',
-    $subtitle-1: mat.define-typography-level(20px, 20px, 500, 'ElysiumBold'),
-  ),
+  typography: $anachronism-font,
   density: 0
 ));
 
@@ -72,6 +86,7 @@ $anachronism-theme: mat.define-dark-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($anachronism-theme);
+@include mat.typography-hierarchy($anachronism-font);
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -86,8 +101,13 @@ $anachronism-theme: mat.define-dark-theme((
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 
 .primary-color {
   color: mat.get-theme-color($anachronism-theme, primary, default);
+}
+
+.flex-separator {
+  flex: 1;
+  text-align: right;
 }

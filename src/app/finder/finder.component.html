@@ -1,10 +1,10 @@
 <mat-sidenav-container class="app-sidenav-container" autosize>
-  <mat-sidenav class="app-sidenav" #drawer mode="side" opened="true">
+  <mat-sidenav class="app-sidenav" #left mode="side" opened="true">
     <mat-toolbar>
-      <button mat-icon-button (click)="drawer.toggle()">
+      <button mat-icon-button (click)="left.toggle()">
         <mat-icon class="primary-color">menu</mat-icon>
       </button>
-      <h3 class="primary-color">Filters</h3>
+      <h3 class="primary-color">FILTERS</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
         <mat-icon>clear</mat-icon>
@@ -12,31 +12,31 @@
     </mat-toolbar>
     <form [formGroup]="filters" class="sidenav-filters">
       <div class="filter-container">
-        <label>Name:</label>
+        <label>Card Name</label>
         <mat-form-field appareance="outline">
-          <input matInput placeholder="Name" formControlName="name"/>
+          <input matInput placeholder="Name of the Card" formControlName="name"/>
         </mat-form-field>
       </div>
       <div class="filter-container">
-        <label>Text:</label>
+        <label><b>Skill:</b>&nbsp;Text</label>
         <mat-form-field appareance="outline">
-          <textarea matInput placeholder="Text" formControlName="text"></textarea>
+          <textarea matInput placeholder="Skill and/or Text" formControlName="text"></textarea>
         </mat-form-field>
       </div>
       <div class="filter-container">
-        <label>Culture(s):</label>
+        <label><span>Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
         <mat-chip-listbox multiple formControlName="cultures">
           <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
-        <label>Type(s):</label>
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span>Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
         <mat-chip-listbox multiple formControlName="types">
           <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
-        <label>Subtype(s):</label>
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span>Subtype</span></label>
         <mat-chip-listbox multiple formControlName="subtypes">
           <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
         </mat-chip-listbox>
@@ -49,10 +49,10 @@
   <mat-sidenav-content class="app-sidenav-content">
     <mat-toolbar class="app-sidenav-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
-        <button mat-icon-button (click)="drawer.toggle()">
+        <button mat-icon-button (click)="left.toggle()">
           <mat-icon class="primary-color">menu</mat-icon>
         </button>
-        <span class="primary-color mat-subtitle-1">Cards ({{ filteredCards().length }}/{{ cards.length }})</span>
+        <span class="primary-color">CARDS ({{ filteredCards().length }}/{{ cards.length }})</span>
       </div>
       <div fxFlex="40">
         <div class="search-container">
@@ -67,10 +67,11 @@
           </form>
         </div>
       </div>
-      <div fxFlex="20" fxLayout="row" fxLayoutAlign="space-evenly center">
-        <button mat-stroked-button color="primary"><mat-icon>database</mat-icon>Database</button>
-        <button mat-stroked-button color="primary"><mat-icon>auto_stories</mat-icon>Finder</button>
-        <button mat-stroked-button color="primary"><mat-icon>stacks</mat-icon>Builder</button>
+      <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
+        <h3 class="primary-color">DECK ({{ deck.length }}/5)</h3>
+        <button mat-icon-button (click)="right.toggle()">
+          <mat-icon class="primary-color">menu</mat-icon>
+        </button>
       </div>
     </mat-toolbar>
     <main class="app-main">
@@ -83,4 +84,21 @@
       </div>
     </main>
   </mat-sidenav-content>
+  <mat-sidenav class="app-sidenav" #right mode="side" opened="true" position="end">
+    <mat-toolbar>
+      <button mat-icon-button>
+        <mat-icon>clear</mat-icon>
+      </button>
+      <span class="flex-separator"></span>
+      <h3 class="primary-color">DECK</h3>
+      <button mat-icon-button (click)="right.toggle()">
+        <mat-icon class="primary-color">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
+      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" cdkDrag>
+        <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
+      </mat-card>
+    </div>
+  </mat-sidenav>
 </mat-sidenav-container>
