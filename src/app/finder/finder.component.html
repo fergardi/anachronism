@@ -12,37 +12,20 @@
     </mat-toolbar>
     <form [formGroup]="filters" class="sidenav-filters">
       <div class="filter-container">
-        <label><b>Card Name</b></label>
+        <label><b>Name</b></label>
         <mat-form-field appareance="outline">
           <input matInput placeholder="Name of the Card" formControlName="name"/>
         </mat-form-field>
       </div>
       <div class="filter-container">
-        <label><b>Skill:</b>&nbsp;Text</label>
-        <mat-form-field appareance="outline">
-          <textarea matInput placeholder="Skill and/or Text" formControlName="text"></textarea>
-        </mat-form-field>
+        <label><b>Initiative</b></label>
+        <mat-slider [min]="initiativeMin" [max]="initiativeMax" discrete>
+          <input value="0" matSliderStartThumb formControlName="initiativeMin">
+          <input value="0" matSliderEndThumb formControlName="initiativeMax">
+        </mat-slider>
       </div>
       <div class="filter-container">
-        <label><b>Culture</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
-        <mat-chip-listbox multiple formControlName="cultures">
-          <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
-        </mat-chip-listbox>
-      </div>
-      <div class="filter-container">
-        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Type</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
-        <mat-chip-listbox multiple formControlName="types">
-          <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
-        </mat-chip-listbox>
-      </div>
-      <div class="filter-container">
-        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Subtype</b></label>
-        <mat-chip-listbox multiple formControlName="subtypes">
-          <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
-        </mat-chip-listbox>
-      </div>
-      <div class="filter-container">
-        <label><b>Attack Grid</b></label>
+        <label><b>Attack</b></label>
         <div fxLayout="row" fxLayoutAlign="center center">
           <div fxFlex="33">
             <mat-form-field appareance="outline">
@@ -85,7 +68,7 @@
           </div>
           <div fxFlex="33">
             <mat-form-field appareance="outline">
-              <input matInput placeholder="X" formControlName="grid_3_2"/>
+              <input matInput placeholder="X/+0" formControlName="grid_3_2"/>
             </mat-form-field>
           </div>
           <div fxFlex="33">
@@ -102,7 +85,7 @@
           </div>
           <div fxFlex="33">
             <mat-form-field appareance="outline">
-              <input matInput placeholder="+0" formControlName="grid_4_2"/>
+              <input matInput placeholder="+0/X" formControlName="grid_4_2"/>
             </mat-form-field>
           </div>
           <div fxFlex="33">
@@ -113,16 +96,73 @@
         </div>
       </div>
       <div class="filter-container">
+        <label><b>Culture</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
+        <mat-chip-listbox multiple formControlName="cultures">
+          <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Type</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
+        <mat-chip-listbox multiple formControlName="types">
+          <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Subtype</b></label>
+        <mat-chip-listbox multiple formControlName="subtypes">
+          <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label><b>Hands</b></label>
+        <mat-slider min="0" max="2" discrete>
+          <input value="0" matSliderStartThumb formControlName="handsMin">
+          <input value="2" matSliderEndThumb formControlName="handsMax">
+        </mat-slider>
+      </div>
+      <div class="filter-container">
         <label><b>Element</b></label>
         <mat-chip-listbox multiple formControlName="elements">
           <mat-chip-option *ngFor="let e of elements">{{ e }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
-        <label><b>Initiative</b></label>
-        <mat-slider min="0" max="10" discrete>
-          <input value="0" matSliderStartThumb formControlName="initiativeMin">
-          <input value="10" matSliderEndThumb formControlName="initiativeMax">
+        <label><b>Text</b></label>
+        <mat-form-field appareance="outline">
+          <textarea matInput placeholder="Ability, Reveal, Action or Text" formControlName="text"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="filter-container">
+        <label><b>Special</b></label>
+        <mat-checkbox formControlName="isReveal">Reveal</mat-checkbox>
+        <mat-checkbox formControlName="isAction">Action</mat-checkbox>
+      </div>
+      <div class="filter-container">
+        <label><b>Life</b></label>
+        <mat-slider [min]="lifeMin" [max]="lifeMax" discrete>
+          <input value="0" matSliderStartThumb formControlName="lifeMin">
+          <input value="0" matSliderEndThumb formControlName="lifeMax">
+        </mat-slider>
+      </div>
+      <div class="filter-container">
+        <label><b>Speed</b></label>
+        <mat-slider [min]="speedMin" [max]="speedMax" discrete>
+          <input value="0" matSliderStartThumb formControlName="speedMin">
+          <input value="0" matSliderEndThumb formControlName="speedMax">
+        </mat-slider>
+      </div>
+      <div class="filter-container">
+        <label><b>Experience</b></label>
+        <mat-slider [min]="experienceMin" [max]="experienceMax" discrete>
+          <input value="0" matSliderStartThumb formControlName="experienceMin">
+          <input value="0" matSliderEndThumb formControlName="experienceMax">
+        </mat-slider>
+      </div>
+      <div class="filter-container">
+        <label><b>Damage</b></label>
+        <mat-slider [min]="damageMin" [max]="damageMax" discrete>
+          <input value="0" matSliderStartThumb formControlName="damageMin">
+          <input value="0" matSliderEndThumb formControlName="damageMax">
         </mat-slider>
       </div>
       <div>

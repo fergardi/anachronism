@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckboxModule } from '@angular/material/checkbox'; 
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
@@ -38,6 +39,7 @@ import { Card, cards, empty} from '../model/card';
     CdkDropList, 
     CdkDrag,
     MatSliderModule,
+    MatCheckboxModule,
   ],
   templateUrl: './finder.component.html',
   styleUrl: './finder.component.scss'
@@ -52,17 +54,39 @@ export class FinderComponent {
   cultures: string[] = [];
   types: string[] = [];
   subtypes: string[] = [];
-  elements: any[] = [];
+  elements: any[] = []; // to allow nulls
+  handsMin: number = 0;
+  handsMax: number = 0;
   initiativeMin: number = 0;
   initiativeMax: number = 0;
+  lifeMin: number = 0;
+  lifeMax: number = 0;
+  speedMin: number = 0;
+  speedMax: number = 0;
+  experienceMin: number = 0;
+  experienceMax: number = 0;
+  damageMin: number = 0;
+  damageMax: number = 0;
+  isReveal: boolean = false;
+  isAction: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
     this.elements = Array.from(new Set(this.cards.filter(card => card.element != null).map(card => card.element)));
+    this.handsMin = this.cards.reduce((min, card) => card.hands != null && card.hands < min ? card.hands : min, 0);
+    this.handsMax = this.cards.reduce((max, card) => card.hands != null && card.hands > max ? card.hands : max, 0);
     this.initiativeMin = this.cards.reduce((min, card) => card.initiative != null && card.initiative < min ? card.initiative : min, 0);
     this.initiativeMax = this.cards.reduce((max, card) => card.initiative != null && card.initiative > max ? card.initiative : max, 0);
+    this.lifeMin = this.cards.reduce((min, card) => card.life != null && card.life < min ? card.life : min, 0);
+    this.lifeMax = this.cards.reduce((max, card) => card.life != null && card.life > max ? card.life : max, 0);
+    this.speedMin = this.cards.reduce((min, card) => card.speed != null && card.speed < min ? card.speed : min, 0);
+    this.speedMax = this.cards.reduce((max, card) => card.speed != null && card.speed > max ? card.speed : max, 0);
+    this.experienceMin = this.cards.reduce((min, card) => card.experience != null && card.experience < min ? card.experience : min, 0);
+    this.experienceMax = this.cards.reduce((max, card) => card.experience != null && card.experience > max ? card.experience : max, 0);
+    this.damageMin = this.cards.reduce((min, card) => card.damage != null && card.damage < min ? card.damage : min, 0);
+    this.damageMax = this.cards.reduce((max, card) => card.damage != null && card.damage > max ? card.damage : max, 0);
 
     this.filters = this.formBuilder.group({
       name: this.formBuilder.control(''),
@@ -70,6 +94,8 @@ export class FinderComponent {
       cultures: this.formBuilder.control([]),
       types: this.formBuilder.control([]),
       subtypes: this.formBuilder.control([]),
+      handsMin: this.formBuilder.control(this.handsMin),
+      handsMax: this.formBuilder.control(this.handsMax),
       grid_1_1: this.formBuilder.control(''),
       grid_1_2: this.formBuilder.control(''),
       grid_1_3: this.formBuilder.control(''),
@@ -85,6 +111,16 @@ export class FinderComponent {
       elements: this.formBuilder.control([]),
       initiativeMin: this.formBuilder.control(this.initiativeMin),
       initiativeMax: this.formBuilder.control(this.initiativeMax),
+      lifeMin: this.formBuilder.control(this.lifeMin),
+      lifeMax: this.formBuilder.control(this.lifeMax),
+      speedMin: this.formBuilder.control(this.speedMin),
+      speedMax: this.formBuilder.control(this.speedMax),
+      experienceMin: this.formBuilder.control(this.experienceMin),
+      experienceMax: this.formBuilder.control(this.experienceMax),
+      damageMin: this.formBuilder.control(this.damageMin),
+      damageMax: this.formBuilder.control(this.damageMax),
+      isReveal: this.formBuilder.control(false),
+      isAction: this.formBuilder.control(false),
     });
 
     this.search = this.formBuilder.group({
@@ -107,6 +143,8 @@ export class FinderComponent {
       'cultures': [],
       'types': [],
       'subtypes': [],
+      'handsMin': 0,
+      'handsMax': 2,
       'grid_1_1': '',
       'grid_1_2': '',
       'grid_1_3': '',
@@ -122,6 +160,16 @@ export class FinderComponent {
       'elements': [],
       'initiativeMin': this.initiativeMin,
       'initiativeMax': this.initiativeMax,
+      'lifeMin': this.lifeMin,
+      'lifeMax': this.lifeMax,
+      'speedMin': this.speedMin,
+      'speedMax': this.speedMax,
+      'experienceMin': this.experienceMin,
+      'experienceMax': this.experienceMax,
+      'damageMin': this.damageMin,
+      'damageMax': this.damageMax,
+      'isReveal': false,
+      'isAction': false
     });
   }
 
@@ -139,6 +187,8 @@ export class FinderComponent {
       .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
       .filter(card => this.filters.get('types')?.value.length > 0 ? this.filters.get('types')?.value.includes(card.type) : true)
       .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true)
+      .filter(card => card.hands != null ? card.hands >= this.filters.get('handsMin')?.value : this.filters.get('handsMin')?.value == 0) // only include null values if the min is 0
+      .filter(card => card.hands != null ? card.hands <= this.filters.get('handsMax')?.value : true)
       .filter(card => card.grid_1_1.toLowerCase().includes(this.filters.get('grid_1_1')?.value.toLowerCase()))
       .filter(card => card.grid_1_2.toLowerCase().includes(this.filters.get('grid_1_2')?.value.toLowerCase()))
       .filter(card => card.grid_1_3.toLowerCase().includes(this.filters.get('grid_1_3')?.value.toLowerCase()))
@@ -152,8 +202,19 @@ export class FinderComponent {
       .filter(card => card.grid_4_2.toLowerCase().includes(this.filters.get('grid_4_2')?.value.toLowerCase()))
       .filter(card => card.grid_4_3.toLowerCase().includes(this.filters.get('grid_4_3')?.value.toLowerCase()))
       .filter(card => this.filters.get('elements')?.value.length > 0 ? this.filters.get('elements')?.value.includes(card.element) : true)
-      .filter(card => card.initiative != null ? card.initiative >= this.filters.get('initiativeMin')?.value : true)
+      .filter(card => card.initiative != null ? card.initiative >= this.filters.get('initiativeMin')?.value : this.filters.get('initiativeMin')?.value == 0) // only include null values if the min is 0
       .filter(card => card.initiative != null ? card.initiative <= this.filters.get('initiativeMax')?.value : true)
+      .filter(card => card.life != null ? card.life >= this.filters.get('lifeMin')?.value : this.filters.get('lifeMin')?.value == 0) // only include null values if the min is 0
+      .filter(card => card.life != null ? card.life <= this.filters.get('lifeMax')?.value : true)
+      .filter(card => card.speed != null ? card.speed >= this.filters.get('speedMin')?.value : this.filters.get('speedMin')?.value == 0) // only include null values if the min is 0
+      .filter(card => card.speed != null ? card.speed <= this.filters.get('speedMax')?.value : true)
+      .filter(card => card.experience != null ? card.experience >= this.filters.get('experienceMin')?.value : this.filters.get('experienceMin')?.value == 0) // only include null values if the min is 0
+      .filter(card => card.experience != null ? card.experience <= this.filters.get('experienceMax')?.value : true)
+      .filter(card => card.damage != null ? card.damage >= this.filters.get('damageMin')?.value : this.filters.get('damageMin')?.value == 0) // only include null values if the min is 0
+      .filter(card => card.damage != null ? card.damage <= this.filters.get('damageMax')?.value : true)
+      .filter(card => card.reveal == this.filters.get('isReveal')?.value)
+      .filter(card => card.action == this.filters.get('isAction')?.value)
+      ;
   }
 
   resetDeck() {
