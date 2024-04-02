@@ -7,12 +7,12 @@
       <h3 class="primary-color">FILTERS</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
-        <mat-icon>clear</mat-icon>
+        <mat-icon class="primary-color">clear</mat-icon>
       </button>
     </mat-toolbar>
     <form [formGroup]="filters" class="sidenav-filters">
       <div class="filter-container">
-        <label>Card Name</label>
+        <label><b>Card Name</b></label>
         <mat-form-field appareance="outline">
           <input matInput placeholder="Name of the Card" formControlName="name"/>
         </mat-form-field>
@@ -24,21 +24,98 @@
         </mat-form-field>
       </div>
       <div class="filter-container">
-        <label><span>Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
+        <label><b>Culture</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
         <mat-chip-listbox multiple formControlName="cultures">
           <mat-chip-option *ngFor="let c of cultures">{{ c }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
-        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span>Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Type</b>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Subtype</span></label>
         <mat-chip-listbox multiple formControlName="types">
           <mat-chip-option *ngFor="let t of types">{{ t }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div class="filter-container">
-        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span>Subtype</span></label>
+        <label><span class="disabled-color">Culture</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<span class="disabled-color">Type</span>&nbsp;&nbsp;<span class="middot">·</span>&nbsp;&nbsp;<b>Subtype</b></label>
         <mat-chip-listbox multiple formControlName="subtypes">
           <mat-chip-option *ngFor="let s of subtypes">{{ s }}</mat-chip-option>
+        </mat-chip-listbox>
+      </div>
+      <div class="filter-container">
+        <label><b>Attack Grid</b></label>
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_1_1"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_1_2"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_1_3"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_2_1"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_2_2"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_2_3"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_3_1"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="X" formControlName="grid_3_2"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_3_3"/>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_4_1"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_4_2"/>
+            </mat-form-field>
+          </div>
+          <div fxFlex="33">
+            <mat-form-field appareance="outline">
+              <input matInput placeholder="+0" formControlName="grid_4_3"/>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="filter-container">
+        <label><b>Element</b></label>
+        <mat-chip-listbox multiple formControlName="elements">
+          <mat-chip-option *ngFor="let e of elements">{{ e }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
       <div>
@@ -58,17 +135,17 @@
         <div class="search-container">
           <form [formGroup]="search">
             <mat-form-field appareance="outline">
-              <mat-icon matPrefix>search</mat-icon>
+              <mat-icon matPrefix class="primary-color">search</mat-icon>
               <input matInput placeholder="Quick search" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
-                <mat-icon>close</mat-icon>
+                <mat-icon class="primary-color">close</mat-icon>
               </button>
             </mat-form-field>
           </form>
         </div>
       </div>
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
-        <h3 class="primary-color">DECK ({{ deck.length }}/5)</h3>
+        <h3 class="primary-color">SELECTED ({{ deck.length }}/5)</h3>
         <button mat-icon-button (click)="right.toggle()">
           <mat-icon class="primary-color">menu</mat-icon>
         </button>

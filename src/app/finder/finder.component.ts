@@ -50,11 +50,13 @@ export class FinderComponent {
   cultures: string[] = [];
   types: string[] = [];
   subtypes: string[] = [];
+  elements: any[] = [];
 
   constructor(private formBuilder: FormBuilder) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
+    this.elements = Array.from(new Set(this.cards.filter(card => card.element != null).map(card => card.element)));
 
     this.filters = this.formBuilder.group({
       name: this.formBuilder.control(''),
@@ -62,6 +64,19 @@ export class FinderComponent {
       cultures: this.formBuilder.control([]),
       types: this.formBuilder.control([]),
       subtypes: this.formBuilder.control([]),
+      grid_1_1: this.formBuilder.control(''),
+      grid_1_2: this.formBuilder.control(''),
+      grid_1_3: this.formBuilder.control(''),
+      grid_2_1: this.formBuilder.control(''),
+      grid_2_2: this.formBuilder.control(''),
+      grid_2_3: this.formBuilder.control(''),
+      grid_3_1: this.formBuilder.control(''),
+      grid_3_2: this.formBuilder.control(''),
+      grid_3_3: this.formBuilder.control(''),
+      grid_4_1: this.formBuilder.control(''),
+      grid_4_2: this.formBuilder.control(''),
+      grid_4_3: this.formBuilder.control(''),
+      elements: this.formBuilder.control([]),
     });
 
     this.search = this.formBuilder.group({
@@ -83,7 +98,20 @@ export class FinderComponent {
       'text': '',
       'cultures': [],
       'types': [],
-      'subtypes': []
+      'subtypes': [],
+      'grid_1_1': '',
+      'grid_1_2': '',
+      'grid_1_3': '',
+      'grid_2_1': '',
+      'grid_2_2': '',
+      'grid_2_3': '',
+      'grid_3_1': '',
+      'grid_3_2': '',
+      'grid_3_3': '',
+      'grid_4_1': '',
+      'grid_4_2': '',
+      'grid_4_3': '',
+      'elements': [],
     });
   }
 
@@ -100,12 +128,25 @@ export class FinderComponent {
       .filter(card => card.text.toLowerCase().includes(this.filters.get('text')?.value.toLowerCase()))
       .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
       .filter(card => this.filters.get('types')?.value.length > 0 ? this.filters.get('types')?.value.includes(card.type) : true)
-      .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true);
+      .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true)
+      .filter(card => card.grid_1_1.toLowerCase().includes(this.filters.get('grid_1_1')?.value.toLowerCase()))
+      .filter(card => card.grid_1_2.toLowerCase().includes(this.filters.get('grid_1_2')?.value.toLowerCase()))
+      .filter(card => card.grid_1_3.toLowerCase().includes(this.filters.get('grid_1_3')?.value.toLowerCase()))
+      .filter(card => card.grid_2_1.toLowerCase().includes(this.filters.get('grid_2_1')?.value.toLowerCase()))
+      .filter(card => card.grid_2_2.toLowerCase().includes(this.filters.get('grid_2_2')?.value.toLowerCase()))
+      .filter(card => card.grid_2_3.toLowerCase().includes(this.filters.get('grid_2_3')?.value.toLowerCase()))
+      .filter(card => card.grid_3_1.toLowerCase().includes(this.filters.get('grid_3_1')?.value.toLowerCase()))
+      .filter(card => card.grid_3_2.toLowerCase().includes(this.filters.get('grid_3_2')?.value.toLowerCase()))
+      .filter(card => card.grid_3_3.toLowerCase().includes(this.filters.get('grid_3_3')?.value.toLowerCase()))
+      .filter(card => card.grid_4_1.toLowerCase().includes(this.filters.get('grid_4_1')?.value.toLowerCase()))
+      .filter(card => card.grid_4_2.toLowerCase().includes(this.filters.get('grid_4_2')?.value.toLowerCase()))
+      .filter(card => card.grid_4_3.toLowerCase().includes(this.filters.get('grid_4_3')?.value.toLowerCase()))
+      .filter(card => this.filters.get('elements')?.value.length > 0 ? this.filters.get('elements')?.value.includes(card.element) : true)
   }
 
   resetDeck() {
     // this.deck = [empty, empty, empty, empty, empty];
-    this.deck = cards.slice(0, 5);
+    this.deck = this.cards.slice(0, 5);
   }
 
   drop(event: CdkDragDrop<Card[]>) {

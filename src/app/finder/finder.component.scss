@@ -42,11 +42,12 @@
       .anachronism-card {
         position: absolute;
         width: calc(100% - 20px); // 100% - padding
-        margin-top: calc(35% * (var(--index))); /* adjust margin-top to control overlap */
+        margin-top: calc(30% * (var(--index))); /* adjust margin-top to control overlap */
+        transition: margin-top 0.3s ease;
       }
 
-      .anachronism-card:hover {
-        z-index: 1;
+      .anachronism-card:hover ~ .anachronism-card {
+        margin-top: calc((30% * (var(--index))) + 100% + 10px);
       }
     }
 
