@@ -118,6 +118,13 @@
           <mat-chip-option *ngFor="let e of elements">{{ e }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
+      <div class="filter-container">
+        <label><b>Initiative</b></label>
+        <mat-slider min="0" max="10" discrete>
+          <input value="0" matSliderStartThumb formControlName="initiativeMin">
+          <input value="10" matSliderEndThumb formControlName="initiativeMax">
+        </mat-slider>
+      </div>
       <div>
         {{ filters.value | json }}
       </div>

@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
@@ -36,6 +37,7 @@ import { Card, cards, empty} from '../model/card';
     JsonPipe,
     CdkDropList, 
     CdkDrag,
+    MatSliderModule,
   ],
   templateUrl: './finder.component.html',
   styleUrl: './finder.component.scss'
@@ -51,12 +53,16 @@ export class FinderComponent {
   types: string[] = [];
   subtypes: string[] = [];
   elements: any[] = [];
+  initiativeMin: number = 0;
+  initiativeMax: number = 0;
 
   constructor(private formBuilder: FormBuilder) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
     this.elements = Array.from(new Set(this.cards.filter(card => card.element != null).map(card => card.element)));
+    this.initiativeMin = this.cards.reduce((min, card) => card.initiative != null && card.initiative < min ? card.initiative : min, 0);
+    this.initiativeMax = this.cards.reduce((max, card) => card.initiative != null && card.initiative > max ? card.initiative : max, 0);
 
     this.filters = this.formBuilder.group({
       name: this.formBuilder.control(''),
@@ -77,6 +83,8 @@ export class FinderComponent {
       grid_4_2: this.formBuilder.control(''),
       grid_4_3: this.formBuilder.control(''),
       elements: this.formBuilder.control([]),
+      initiativeMin: this.formBuilder.control(this.initiativeMin),
+      initiativeMax: this.formBuilder.control(this.initiativeMax),
     });
 
     this.search = this.formBuilder.group({
@@ -112,6 +120,8 @@ export class FinderComponent {
       'grid_4_2': '',
       'grid_4_3': '',
       'elements': [],
+      'initiativeMin': this.initiativeMin,
+      'initiativeMax': this.initiativeMax,
     });
   }
 
@@ -142,6 +152,8 @@ export class FinderComponent {
       .filter(card => card.grid_4_2.toLowerCase().includes(this.filters.get('grid_4_2')?.value.toLowerCase()))
       .filter(card => card.grid_4_3.toLowerCase().includes(this.filters.get('grid_4_3')?.value.toLowerCase()))
       .filter(card => this.filters.get('elements')?.value.length > 0 ? this.filters.get('elements')?.value.includes(card.element) : true)
+      .filter(card => card.initiative != null ? card.initiative >= this.filters.get('initiativeMin')?.value : true)
+      .filter(card => card.initiative != null ? card.initiative <= this.filters.get('initiativeMax')?.value : true)
   }
 
   resetDeck() {
