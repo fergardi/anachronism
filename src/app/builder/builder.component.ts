@@ -25,6 +25,7 @@ import { Card, cards, empty} from '../model/card';
 @Component({
   selector: 'app-rules',
   templateUrl: './rules.sheet.html',
+  styleUrl: './rules.sheet.scss',
   standalone: true,
   imports: [],
 })
@@ -265,8 +266,10 @@ export class BuilderComponent {
   }
 
   removeFromDeck(index: number): void {
-    this.deck.splice(index, 1);
-    this.deck.push(empty);
+    if (this.deck[index].name != 'Empty') {
+      this.deck.splice(index, 1);
+      this.deck.push(empty);
+    }
   }
 
   resetDeck(): void {
@@ -297,24 +300,33 @@ export class BuilderComponent {
   }
 
   isWarriorValid(warrior: Card): boolean {
-    return this.deck.filter(card => card.type == 'Warrior')?.length == 1 && 
+    return warrior.type == 'Warrior' &&
+      this.deck.filter(card => card.type == 'Warrior')?.length == 1 && 
       this.deck.findIndex(card => card.name == warrior.name) == 0;
   }
 
   isWeaponValid(weapon: Card): boolean {
-    return this.deck.filter(card => card.type == 'Weapon')?.length == 1;
+    return weapon.type == 'Weapon' &&
+      this.deck.filter(card => card.type == 'Weapon')?.length == 1 &&
+      this.deck.findIndex(card => card.name == weapon.name) != 0;
   }
 
   isArmorValid(armor: Card): boolean {
-    return this.deck.filter(card => card.type == 'Armor')?.length == 1;
+    return armor.type == 'Armor' &&
+      this.deck.filter(card => card.type == 'Armor')?.length == 1 &&
+      this.deck.findIndex(card => card.name == armor.name) != 0;
   }
 
   isInspirationValid(inspiration: Card): boolean {
-    return this.deck.filter(card => card.type == 'Inspiration')?.length == 1;
+    return inspiration.type == 'Inspiration' &&
+      this.deck.filter(card => card.type == 'Inspiration')?.length == 1 &&
+      this.deck.findIndex(card => card.name == inspiration.name) != 0;
   }
 
   isSpecialValid(special: Card): boolean {
-    return this.deck.filter(card => card.type == 'Special')?.length == 1;
+    return special.type == 'Special' &&
+      this.deck.filter(card => card.type == 'Special')?.length == 1 &&
+      this.deck.findIndex(card => card.name == special.name) != 0;
   }
 
   openRules(event: MouseEvent): void {
