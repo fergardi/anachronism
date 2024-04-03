@@ -2,8 +2,9 @@
   <mat-sidenav class="app-sidenav" #left mode="side" opened="true">
     <mat-toolbar>
       <button mat-icon-button (click)="left.toggle()">
-        <mat-icon class="primary-color">menu</mat-icon>
+        <mat-icon class="primary-color">keyboard_arrow_left</mat-icon>
       </button>
+      <span class="flex-separator"></span>
       <h3 class="primary-color">FILTERS</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
@@ -24,7 +25,7 @@
           <input value="0" matSliderEndThumb formControlName="initiativeMax">
         </mat-slider>
       </div>
-      <div class="filter-container">
+      <div class="filter-container input-centered">
         <label><b>Attack</b></label>
         <div fxLayout="row" fxLayoutAlign="center center">
           <div fxFlex="33">
@@ -133,11 +134,6 @@
         </mat-form-field>
       </div>
       <div class="filter-container">
-        <label><b>Special</b></label>
-        <mat-checkbox formControlName="isReveal">Reveal</mat-checkbox>
-        <mat-checkbox formControlName="isAction">Action</mat-checkbox>
-      </div>
-      <div class="filter-container">
         <label><b>Life</b></label>
         <mat-slider [min]="lifeMin" [max]="lifeMax" discrete>
           <input value="0" matSliderStartThumb formControlName="lifeMin">
@@ -165,6 +161,17 @@
           <input value="0" matSliderEndThumb formControlName="damageMax">
         </mat-slider>
       </div>
+      <div class="filter-container">
+        <label><b>Perks</b></label>
+        <mat-checkbox color="primary" formControlName="isMultipleWeapon">Multiple Weapons</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isMultipleArmor">Multiple Armors</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isMultipleInspiration">Multiple Inspirations</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isMultipleSpecial">Multiple Specials</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isReveal">Has Reveal</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isAction">Has Action</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isRivalry">Has Rivalry</mat-checkbox>
+        <mat-checkbox color="primary" formControlName="isDiscard">Has Discard</mat-checkbox>
+      </div>
       <div>
         {{ filters.value | json }}
       </div>
@@ -180,10 +187,10 @@
       </div>
       <div fxFlex="40">
         <div class="search-container">
-          <form [formGroup]="search">
+          <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
               <mat-icon matPrefix class="primary-color">search</mat-icon>
-              <input matInput placeholder="Quick search" formControlName="query"/>
+              <input matInput placeholder="Quick Search" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
                 <mat-icon class="primary-color">close</mat-icon>
               </button>
@@ -201,7 +208,7 @@
     <main class="app-main">
       <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
         <div class="flexbox-item" fxFlex.xl="12.5" fxFlex.lg="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" *ngFor="let card of filteredCards()">
-          <mat-card class="anachronism-card">
+          <mat-card class="anachronism-card" (click)="addToDeck(card)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
         </div>
@@ -210,17 +217,18 @@
   </mat-sidenav-content>
   <mat-sidenav class="app-sidenav" #right mode="side" opened="true" position="end">
     <mat-toolbar>
-      <button mat-icon-button>
-        <mat-icon>clear</mat-icon>
+      <button mat-icon-button (click)="resetDeck()">
+        <mat-icon class="primary-color">delete</mat-icon>
       </button>
       <span class="flex-separator"></span>
       <h3 class="primary-color">DECK</h3>
+      <span class="flex-separator"></span>
       <button mat-icon-button (click)="right.toggle()">
-        <mat-icon class="primary-color">menu</mat-icon>
+        <mat-icon class="primary-color">keyboard_arrow_right</mat-icon>
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
-      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" cdkDrag>
+      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" cdkDrag (click)="removeFromDeck(i)">
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>

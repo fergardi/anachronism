@@ -13,7 +13,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatCheckboxModule } from '@angular/material/checkbox'; 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
@@ -40,6 +41,7 @@ import { Card, cards, empty} from '../model/card';
     CdkDrag,
     MatSliderModule,
     MatCheckboxModule,
+    MatSlideToggleModule,
   ],
   templateUrl: './finder.component.html',
   styleUrl: './finder.component.scss'
@@ -67,8 +69,6 @@ export class FinderComponent {
   experienceMax: number = 0;
   damageMin: number = 0;
   damageMax: number = 0;
-  isReveal: boolean = false;
-  isAction: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
@@ -119,8 +119,14 @@ export class FinderComponent {
       experienceMax: this.formBuilder.control(this.experienceMax),
       damageMin: this.formBuilder.control(this.damageMin),
       damageMax: this.formBuilder.control(this.damageMax),
+      isMultipleWeapon: this.formBuilder.control(false),
+      isMultipleArmor: this.formBuilder.control(false),
+      isMultipleInspiration: this.formBuilder.control(false),
+      isMultipleSpecial: this.formBuilder.control(false),
       isReveal: this.formBuilder.control(false),
       isAction: this.formBuilder.control(false),
+      isRivalry: this.formBuilder.control(false),
+      isDiscard: this.formBuilder.control(false),
     });
 
     this.search = this.formBuilder.group({
@@ -168,8 +174,14 @@ export class FinderComponent {
       'experienceMax': this.experienceMax,
       'damageMin': this.damageMin,
       'damageMax': this.damageMax,
+      'isMultipleWeapon': false,
+      'isMultipleArmor': false,
+      'isMultipleInspiration': false,
+      'isMultipleSpecial': false,
       'isReveal': false,
-      'isAction': false
+      'isAction': false,
+      'isRival': false,
+      'isDiscard': false,
     });
   }
 
@@ -212,14 +224,31 @@ export class FinderComponent {
       .filter(card => card.experience != null ? card.experience <= this.filters.get('experienceMax')?.value : true)
       .filter(card => card.damage != null ? card.damage >= this.filters.get('damageMin')?.value : this.filters.get('damageMin')?.value == 0) // only include null values if the min is 0
       .filter(card => card.damage != null ? card.damage <= this.filters.get('damageMax')?.value : true)
-      .filter(card => card.reveal == this.filters.get('isReveal')?.value)
-      .filter(card => card.action == this.filters.get('isAction')?.value)
+      .filter(card => this.filters.get('isMultipleWeapon')?.value ? this.filters.get('isMultipleWeapon')?.value == card.multiple_weapons : true)
+      .filter(card => this.filters.get('isMultipleArmor')?.value ? this.filters.get('isMultipleArmor')?.value == card.multiple_armors : true)
+      .filter(card => this.filters.get('isMultipleInspiration')?.value ? this.filters.get('isMultipleInspiration')?.value == card.multiple_inspirations : true)
+      .filter(card => this.filters.get('isMultipleSpecial')?.value ? this.filters.get('isMultipleSpecial')?.value == card.multiple_specials : true)
+      .filter(card => this.filters.get('isReveal')?.value ? this.filters.get('isReveal')?.value == card.reveal : true)
+      .filter(card => this.filters.get('isAction')?.value ? this.filters.get('isAction')?.value == card.action : true)
+      .filter(card => this.filters.get('isRival')?.value ? this.filters.get('isRival')?.value == card.rivalry : true)
+      .filter(card => this.filters.get('isDiscard')?.value ? this.filters.get('isDiscard')?.value == card.discards : true)
       ;
   }
 
+  addToDeck(card: Card) {
+    let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
+    if (firstEmptyCard >= 0) {
+      this.deck.splice(firstEmptyCard, 1, card);
+    }
+  }
+
+  removeFromDeck(index: number) {
+    this.deck.splice(index, 1);
+    this.deck.push(empty);
+  }
+
   resetDeck() {
-    // this.deck = [empty, empty, empty, empty, empty];
-    this.deck = this.cards.slice(0, 5);
+    this.deck = [empty, empty, empty, empty, empty];
   }
 
   drop(event: CdkDragDrop<Card[]>) {
