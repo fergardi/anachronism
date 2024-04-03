@@ -38,6 +38,18 @@
       }
     }
 
+    .info-button {
+      font-family: 'ElysiumBold';
+      font-size: 20px;
+
+      .invalid-deck .mat-badge-content {
+        font-family: 'Material Icons';
+        color: var(--warn-color);
+        background: none;
+        font-size: 1.1rem;
+      }
+    }
+
     .sidenav-deck {
       height: calc(100% - 84px); // - 64px - padding
       overflow: hidden auto;
@@ -51,11 +63,11 @@
         margin-top: calc(30% * (var(--index))); /* adjust margin-top to control overlap */
         transition: margin-top 0.3s ease;
         cursor: move;
-        &:hover {
-          border-color: var(--primary-color);
-        }
         &:hover ~ .anachronism-card {
           margin-top: calc((30% * (var(--index))) + 100% + 10px);
+        }
+        &.invalid-card {
+          border-color: var(--warn-color);
         }
       }
 
@@ -67,6 +79,12 @@
     overflow: hidden;
 
     .app-sidenav-toolbar {
+
+      .mat-badge-content {
+        border-radius: 50px;
+        width: auto;
+        padding: 0 10px;
+      }
       
       .search-container {
         width: 100%;
@@ -105,6 +123,7 @@
           border-color: var(--primary-color);
           scale: 1.2;
           z-index: 1000;
+          cursor: pointer;
         }
       }
 

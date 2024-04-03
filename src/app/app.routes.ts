@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
 import { DatabaseComponent } from './database/database.component';
-import { FinderComponent } from './finder/finder.component';
+import { BuilderComponent } from './builder/builder.component';
 
 export const routes: Routes = [
   { path: 'database', component: DatabaseComponent },
-  { path: 'finder', component: FinderComponent },
+  { path: 'builder', component: BuilderComponent },
+  { path: '', redirectTo: '/builder', pathMatch: 'full' },
+  { path: '**', redirectTo: '/builder', pathMatch: 'full' },
 ];

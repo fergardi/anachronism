@@ -15,13 +15,25 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet'; 
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
 import { Card, cards, empty} from '../model/card';
 
 @Component({
-  selector: 'app-finder',
+  selector: 'app-rules',
+  templateUrl: './rules.sheet.html',
+  standalone: true,
+  imports: [],
+})
+export class RulesSheet {
+  constructor(private rulesRef: MatBottomSheetRef<RulesSheet>) {}
+}
+
+@Component({
+  selector: 'app-builder',
   standalone: true,
   imports: [
     CommonModule,
@@ -42,11 +54,13 @@ import { Card, cards, empty} from '../model/card';
     MatSliderModule,
     MatCheckboxModule,
     MatSlideToggleModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
   ],
-  templateUrl: './finder.component.html',
-  styleUrl: './finder.component.scss'
+  templateUrl: './builder.component.html',
+  styleUrl: './builder.component.scss'
 })
-export class FinderComponent {
+export class BuilderComponent {
   cards: Card[] = cards;
   deck: Card[] = [];
 
@@ -69,8 +83,12 @@ export class FinderComponent {
   experienceMax: number = 0;
   damageMin: number = 0;
   damageMax: number = 0;
+  sets: string[] = [];
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private rulesRef: MatBottomSheet
+  ) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
@@ -87,6 +105,7 @@ export class FinderComponent {
     this.experienceMax = this.cards.reduce((max, card) => card.experience != null && card.experience > max ? card.experience : max, 0);
     this.damageMin = this.cards.reduce((min, card) => card.damage != null && card.damage < min ? card.damage : min, 0);
     this.damageMax = this.cards.reduce((max, card) => card.damage != null && card.damage > max ? card.damage : max, 0);
+    this.sets = Array.from(new Set(this.cards.map(card => card.set)));
 
     this.filters = this.formBuilder.group({
       name: this.formBuilder.control(''),
@@ -127,6 +146,7 @@ export class FinderComponent {
       isAction: this.formBuilder.control(false),
       isRivalry: this.formBuilder.control(false),
       isDiscard: this.formBuilder.control(false),
+      sets: this.formBuilder.control([]),
     });
 
     this.search = this.formBuilder.group({
@@ -136,13 +156,13 @@ export class FinderComponent {
     this.resetAll();
   }
 
-  resetAll() {
+  resetAll(): void {
     this.resetFilters();
     this.resetSearch();
     this.resetDeck();
   }
 
-  resetFilters() {
+  resetFilters(): void {
     this.filters.patchValue({
       'name': '',
       'text': '',
@@ -182,10 +202,11 @@ export class FinderComponent {
       'isAction': false,
       'isRival': false,
       'isDiscard': false,
+      'sets': [],
     });
   }
 
-  resetSearch() {
+  resetSearch(): void {
     this.search.patchValue({
       'query': ''
     });
@@ -232,27 +253,71 @@ export class FinderComponent {
       .filter(card => this.filters.get('isAction')?.value ? this.filters.get('isAction')?.value == card.action : true)
       .filter(card => this.filters.get('isRival')?.value ? this.filters.get('isRival')?.value == card.rivalry : true)
       .filter(card => this.filters.get('isDiscard')?.value ? this.filters.get('isDiscard')?.value == card.discards : true)
+      .filter(card => this.filters.get('sets')?.value.length > 0 ? this.filters.get('sets')?.value.includes(card.set) : true)
       ;
   }
 
-  addToDeck(card: Card) {
+  addToDeck(card: Card): void {
     let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
     if (firstEmptyCard >= 0) {
       this.deck.splice(firstEmptyCard, 1, card);
     }
   }
 
-  removeFromDeck(index: number) {
+  removeFromDeck(index: number): void {
     this.deck.splice(index, 1);
     this.deck.push(empty);
   }
 
-  resetDeck() {
+  resetDeck(): void {
     this.deck = [empty, empty, empty, empty, empty];
   }
 
-  drop(event: CdkDragDrop<Card[]>) {
+  notEmptyCards(): number {
+    return this.deck.filter(card => card.name != 'Empty').length;
+  }
+
+  drop(event: CdkDragDrop<Card[]>): void {
     moveItemInArray(this.deck, event.previousIndex, event.currentIndex);
   }
 
+  isDeckValid(): boolean {
+    return this.deck.every(card => this.isCardValid(card));
+  }
+
+  isCardValid(card: Card): boolean {
+    switch (card.type) {
+      case 'Warrior': return this.isWarriorValid(card);
+      case 'Weapon': return this.isWeaponValid(card);
+      case 'Armor': return this.isArmorValid(card);
+      case 'Inspiration': return this.isInspirationValid(card);
+      case 'Special': return this.isSpecialValid(card);
+      default: return false;
+    }
+  }
+
+  isWarriorValid(warrior: Card): boolean {
+    return this.deck.filter(card => card.type == 'Warrior')?.length == 1 && 
+      this.deck.findIndex(card => card.name == warrior.name) == 0;
+  }
+
+  isWeaponValid(weapon: Card): boolean {
+    return this.deck.filter(card => card.type == 'Weapon')?.length == 1;
+  }
+
+  isArmorValid(armor: Card): boolean {
+    return this.deck.filter(card => card.type == 'Armor')?.length == 1;
+  }
+
+  isInspirationValid(inspiration: Card): boolean {
+    return this.deck.filter(card => card.type == 'Inspiration')?.length == 1;
+  }
+
+  isSpecialValid(special: Card): boolean {
+    return this.deck.filter(card => card.type == 'Special')?.length == 1;
+  }
+
+  openRules(event: MouseEvent): void {
+    this.rulesRef.open(RulesSheet);
+  }
 }

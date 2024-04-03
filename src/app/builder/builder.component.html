@@ -8,7 +8,7 @@
       <h3 class="primary-color">FILTERS</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
-        <mat-icon class="primary-color">clear</mat-icon>
+        <mat-icon class="primary-color">filter_list_off</mat-icon>
       </button>
     </mat-toolbar>
     <form [formGroup]="filters" class="sidenav-filters">
@@ -172,18 +172,22 @@
         <mat-checkbox color="primary" formControlName="isRivalry">Has Rivalry</mat-checkbox>
         <mat-checkbox color="primary" formControlName="isDiscard">Has Discard</mat-checkbox>
       </div>
-      <div>
-        {{ filters.value | json }}
+      <div class="filter-container">
+        <label><b>Set</b></label>
+        <mat-chip-listbox multiple formControlName="sets">
+          <mat-chip-option *ngFor="let s of sets">{{ s }}</mat-chip-option>
+        </mat-chip-listbox>
       </div>
+      <!--<div>{{ filters.value | json }}</div>-->
     </form>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
     <mat-toolbar class="app-sidenav-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
         <button mat-icon-button (click)="left.toggle()">
-          <mat-icon class="primary-color">menu</mat-icon>
+          <mat-icon class="primary-color">filter_list</mat-icon>
         </button>
-        <span class="primary-color">CARDS ({{ filteredCards().length }}/{{ cards.length }})</span>
+        <span class="primary-color"><div matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgeOverlap="false">CARDS</div></span>
       </div>
       <div fxFlex="40">
         <div class="search-container">
@@ -199,9 +203,9 @@
         </div>
       </div>
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
-        <h3 class="primary-color">SELECTED ({{ deck.length }}/5)</h3>
+        <h3 class="primary-color"><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">DECK</div></h3>
         <button mat-icon-button (click)="right.toggle()">
-          <mat-icon class="primary-color">menu</mat-icon>
+          <mat-icon class="primary-color">style</mat-icon>
         </button>
       </div>
     </mat-toolbar>
@@ -221,14 +225,18 @@
         <mat-icon class="primary-color">delete</mat-icon>
       </button>
       <span class="flex-separator"></span>
-      <h3 class="primary-color">DECK</h3>
+      <h3 class="primary-color">
+        <button mat-stroked-button class="info-button" color="primary" (click)="openRules($event)">
+          <div matBadge="priority_high" matBadgeOverlap="false" matBadgeColor="warn" [matBadgeHidden]="isDeckValid()" class="invalid-deck">RULES</div>
+        </button>
+      </h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="right.toggle()">
         <mat-icon class="primary-color">keyboard_arrow_right</mat-icon>
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
-      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" cdkDrag (click)="removeFromDeck(i)">
+      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card) ? '' : 'invalid-card'" cdkDrag (click)="removeFromDeck(i)">
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>

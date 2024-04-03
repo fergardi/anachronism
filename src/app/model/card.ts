@@ -75,7 +75,7 @@ export interface Card {
 };
 
 export const empty: Card = {
-  name: "Empty Card",
+  name: "Empty",
   culture: "",
   type: "",
   subtype: "",

@@ -106,11 +106,15 @@ body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 // https://sass-lang.com/documentation/breaking-changes/css-vars
 :root {
   --primary-color: #{mat.get-theme-color($anachronism-theme, primary, default)};
+  --warn-color: #{mat.get-theme-color($anachronism-theme, warn, default)};
 }
 
 .primary-color {
   color: mat.get-theme-color($anachronism-theme, primary, default);
-  // color: var(--primary-color);
+}
+
+.warn-color {
+  color: mat.get-theme-color($anachronism-theme, warn, default);
 }
 
 .flex-separator {
