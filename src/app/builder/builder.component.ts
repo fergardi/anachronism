@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -63,6 +64,8 @@ export class RulesSheet {
   styleUrl: './builder.component.scss'
 })
 export class BuilderComponent {
+  mobileQuery: MediaQueryList;
+
   cards: Card[] = cards;
   deck: Card[] = [];
 
@@ -87,11 +90,19 @@ export class BuilderComponent {
   damageMax: number = 0;
   sets: string[] = [];
 
+  private mobileQueryListener: () => void;
+
   constructor(
     private formBuilder: FormBuilder,
     private rulesRef: MatBottomSheet,
     private snackBar: MatSnackBar,
+    private changeDetectorRef: ChangeDetectorRef, 
+    private media: MediaMatcher,
   ) {
+    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQuery.addListener(this.mobileQueryListener);
+
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
     this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
@@ -159,6 +170,10 @@ export class BuilderComponent {
     this.resetAll();
   }
 
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this.mobileQueryListener);
+  }
+
   resetAll(): void {
     this.resetFilters();
     this.resetSearch();
@@ -207,6 +222,7 @@ export class BuilderComponent {
       'isDiscard': false,
       'sets': [],
     });
+    this.openNotification('Filters reseted');
   }
 
   resetSearch(): void {
@@ -279,7 +295,7 @@ export class BuilderComponent {
 
   resetDeck(): void {
     this.deck = [empty, empty, empty, empty, empty];
-    this.openNotification('Deck reseted');
+    this.openNotification('Deck restarted');
   }
 
   notEmptyCards(): number {

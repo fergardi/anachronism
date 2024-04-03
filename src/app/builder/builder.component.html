@@ -1,5 +1,5 @@
 <mat-sidenav-container class="app-sidenav-container" autosize>
-  <mat-sidenav class="app-sidenav" #left mode="side" opened="true">
+  <mat-sidenav class="app-sidenav" #left [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
     <mat-toolbar>
       <button mat-icon-button (click)="left.toggle()">
         <mat-icon class="primary-color">keyboard_arrow_left</mat-icon>
@@ -187,9 +187,9 @@
         <button mat-icon-button (click)="left.toggle()">
           <mat-icon class="primary-color">filter_list</mat-icon>
         </button>
-        <span class="primary-color"><div matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgeOverlap="false">CARDS</div></span>
+        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgeOverlap="false">CARDS</div></span>
       </div>
-      <div fxFlex="40">
+      <div fxFlex="60">
         <div class="search-container">
           <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
@@ -203,7 +203,7 @@
         </div>
       </div>
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
-        <h3 class="primary-color"><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">DECK</div></h3>
+        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">DECK</div></span>
         <button mat-icon-button (click)="right.toggle()">
           <mat-icon class="primary-color">style</mat-icon>
         </button>
@@ -211,7 +211,7 @@
     </mat-toolbar>
     <main class="app-main">
       <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
-        <div class="flexbox-item" fxFlex.xl="12.5" fxFlex.lg="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="50" *ngFor="let card of filteredCards()">
+        <div class="flexbox-item" fxFlex.xl="12.5" fxFlex.lg="20" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="50" *ngFor="let card of filteredCards()">
           <mat-card class="anachronism-card" (click)="addToDeck(card)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
@@ -219,7 +219,7 @@
       </div>
     </main>
   </mat-sidenav-content>
-  <mat-sidenav class="app-sidenav" #right mode="side" opened="true" position="end">
+  <mat-sidenav class="app-sidenav" #right position="end" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
     <mat-toolbar>
       <button mat-icon-button (click)="resetDeck()">
         <mat-icon class="primary-color">delete</mat-icon>

@@ -3,7 +3,7 @@
   height: 100%;
 
   .app-sidenav {
-    width: 270px;
+    width: 300px;
     box-sizing: border-box;
     height: 100%;
 
@@ -84,6 +84,7 @@
         border-radius: 50px;
         width: auto;
         padding: 0 10px;
+        z-index: 1000;
       }
       
       .search-container {
