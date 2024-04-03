@@ -17,6 +17,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet'; 
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
@@ -88,7 +89,8 @@ export class BuilderComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private rulesRef: MatBottomSheet
+    private rulesRef: MatBottomSheet,
+    private snackBar: MatSnackBar,
   ) {
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
@@ -262,18 +264,22 @@ export class BuilderComponent {
     let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
     if (firstEmptyCard >= 0) {
       this.deck.splice(firstEmptyCard, 1, card);
+      this.openNotification('Added "' + card.name + '" to deck');
     }
   }
 
-  removeFromDeck(index: number): void {
-    if (this.deck[index].name != 'Empty') {
+  removeFromDeck(card: Card): void {
+    let index = this.deck.findIndex(c => c.name == card.name);
+    if (index >= 0 && this.deck[index].name != 'Empty') {
       this.deck.splice(index, 1);
       this.deck.push(empty);
+      this.openNotification('Removed "' + card.name + '" from deck');
     }
   }
 
   resetDeck(): void {
     this.deck = [empty, empty, empty, empty, empty];
+    this.openNotification('Deck reseted');
   }
 
   notEmptyCards(): number {
@@ -332,4 +338,14 @@ export class BuilderComponent {
   openRules(event: MouseEvent): void {
     this.rulesRef.open(RulesSheet);
   }
+
+  openNotification(text: string): void {
+    this.snackBar.open(text, 'OK', {
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      duration: 3000,
+      panelClass: 'anachronism-notification',
+    });
+  }
+
 }

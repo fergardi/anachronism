@@ -236,7 +236,7 @@
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
-      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card) ? '' : 'invalid-card'" cdkDrag (click)="removeFromDeck(i)">
+      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card) ? '' : 'invalid-card'" cdkDrag (click)="removeFromDeck(card)">
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>

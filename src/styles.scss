@@ -107,14 +107,16 @@ body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 :root {
   --primary-color: #{mat.get-theme-color($anachronism-theme, primary, default)};
   --warn-color: #{mat.get-theme-color($anachronism-theme, warn, default)};
+  --foreground-color: #{mat.get-theme-color($anachronism-theme, foreground, text)};
+  --background-color: #{mat.get-theme-color($anachronism-theme, background, card)};
 }
 
 .primary-color {
-  color: mat.get-theme-color($anachronism-theme, primary, default);
+  color: var(--primary-color);
 }
 
 .warn-color {
-  color: mat.get-theme-color($anachronism-theme, warn, default);
+  color: var(--warn-color);
 }
 
 .flex-separator {
@@ -127,4 +129,13 @@ body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
   min-width: initial !important;
   // background: url('/assets/cards/0_000.jpg') no-repeat center center !important; // fixed
   // background-size: cover !important;
+}
+
+.mat-mdc-snack-bar-container {
+  --mat-snack-bar-button-color: var(--primary-color);
+  --mdc-snackbar-supporting-text-color: var(--primary-color);
+
+  &.anachronism-notification {
+    --mdc-snackbar-container-color: var(--background-color);
+  }  
 }
