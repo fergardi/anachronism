@@ -233,7 +233,7 @@ export class BuilderComponent {
 
   filteredCards(): Card[] {
     return this.cards
-      .filter(card => card.name.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()))
+      .filter(card => card.name.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()) || card.text.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()))
       .filter(card => card.name.toLowerCase().includes(this.filters.get('name')?.value.toLowerCase()))
       .filter(card => card.text.toLowerCase().includes(this.filters.get('text')?.value.toLowerCase()))
       .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
@@ -306,51 +306,6 @@ export class BuilderComponent {
     moveItemInArray(this.deck, event.previousIndex, event.currentIndex);
   }
 
-  isDeckValid(): boolean {
-    return this.deck.every(card => this.isCardValid(card));
-  }
-
-  isCardValid(card: Card): boolean {
-    switch (card.type) {
-      case 'Warrior': return this.isWarriorValid(card);
-      case 'Weapon': return this.isWeaponValid(card);
-      case 'Armor': return this.isArmorValid(card);
-      case 'Inspiration': return this.isInspirationValid(card);
-      case 'Special': return this.isSpecialValid(card);
-      default: return false;
-    }
-  }
-
-  isWarriorValid(warrior: Card): boolean {
-    return warrior.type == 'Warrior' &&
-      this.deck.filter(card => card.type == 'Warrior')?.length == 1 && 
-      this.deck.findIndex(card => card.name == warrior.name) == 0;
-  }
-
-  isWeaponValid(weapon: Card): boolean {
-    return weapon.type == 'Weapon' &&
-      this.deck.filter(card => card.type == 'Weapon')?.length == 1 &&
-      this.deck.findIndex(card => card.name == weapon.name) != 0;
-  }
-
-  isArmorValid(armor: Card): boolean {
-    return armor.type == 'Armor' &&
-      this.deck.filter(card => card.type == 'Armor')?.length == 1 &&
-      this.deck.findIndex(card => card.name == armor.name) != 0;
-  }
-
-  isInspirationValid(inspiration: Card): boolean {
-    return inspiration.type == 'Inspiration' &&
-      this.deck.filter(card => card.type == 'Inspiration')?.length == 1 &&
-      this.deck.findIndex(card => card.name == inspiration.name) != 0;
-  }
-
-  isSpecialValid(special: Card): boolean {
-    return special.type == 'Special' &&
-      this.deck.filter(card => card.type == 'Special')?.length == 1 &&
-      this.deck.findIndex(card => card.name == special.name) != 0;
-  }
-
   openRules(event: MouseEvent): void {
     this.rulesRef.open(RulesSheet);
   }
@@ -362,6 +317,65 @@ export class BuilderComponent {
       duration: 3000,
       panelClass: 'anachronism-notification',
     });
+  }
+
+  isCardValid(card: Card): boolean {
+    if (card.name === 'Empty') {
+      return false;
+    }
+
+    // Initialize card properties object
+    const counts: { [key: string]: number } = {
+      warrior: 0,
+      weapon: 0,
+      armor: 0,
+      inspiration: 0,
+      special: 0
+    };
+    const modifiers: { [key: string]: boolean } = {
+      multiple_warriors: false,
+      multiple_weapons: false,
+      multiple_armors: false,
+      multiple_inspirations: false,
+      multiple_specials: false
+    };
+
+    // Count occurrences and determine if multiples are allowed
+    for (const currentCard of this.deck.filter(c => c.name !== 'Empty')) {
+      console.log(currentCard.type.toLowerCase());
+      // Increment the count of the current card type
+      counts[currentCard.type.toLowerCase()]++;
+      // Check if the current card allows multiples
+      
+      modifiers['multiple_warriors'] = modifiers['multiple_warriors'] || currentCard['multiple_warriors'] == true;
+      modifiers['multiple_weapons'] = modifiers['multiple_weapons'] || currentCard['multiple_weapons'] == true;
+      modifiers['multiple_armors'] = modifiers['multiple_armors'] || currentCard['multiple_armors'] == true;
+      modifiers['multiple_inspirations'] = modifiers['multiple_inspirations'] || currentCard['multiple_inspirations'] == true;
+      modifiers['multiple_specials'] = modifiers['multiple_specials'] || currentCard['multiple_specials'] == true;
+    }
+
+    console.log(counts, modifiers);
+
+    // Check if the card type exceeds the allowed limit
+    if (!modifiers['multiple_' + card.type.toLowerCase() + 's'] && counts[card.type.toLowerCase()] > 1) {
+      return false; // More than 1 cards of the same type without multiple property
+    }
+    // Check if the card type exceeds the allowed limit
+    if (modifiers['multiple_' + card.type.toLowerCase() + 's'] && counts[card.type.toLowerCase()] > 2) {
+      return false; // More than 2 cards of the same type with multiple property
+    }
+
+    return true;
+  }
+
+  isDeckValid(): boolean {
+    for (const card of this.deck) {
+      if (!this.isCardValid(card)) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
 }
