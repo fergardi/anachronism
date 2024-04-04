@@ -194,7 +194,7 @@
           <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
               <mat-icon matPrefix class="primary-color">search</mat-icon>
-              <input matInput placeholder="Quick Search" formControlName="query"/>
+              <input matInput placeholder="DATACHRONISM" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
                 <mat-icon class="primary-color">close</mat-icon>
               </button>
@@ -236,9 +236,12 @@
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
-      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card) ? '' : 'invalid-card'" cdkDrag (click)="removeFromDeck(card)">
+      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card, i) === false ? 'invalid-card' : ''" cdkDrag (click)="removeFromDeck(i)">
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>
+    <button mat-fab color="primary" class="share-button" (click)="shareDeck()">
+      <mat-icon>share</mat-icon>
+    </button>
   </mat-sidenav>
 </mat-sidenav-container>

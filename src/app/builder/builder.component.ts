@@ -3,6 +3,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -98,10 +99,14 @@ export class BuilderComponent {
     private snackBar: MatSnackBar,
     private changeDetectorRef: ChangeDetectorRef, 
     private media: MediaMatcher,
+    private router: Router,
+    private route: ActivatedRoute,
   ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
+
+    this.deck = [empty, empty, empty, empty, empty];
 
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
@@ -168,6 +173,16 @@ export class BuilderComponent {
     });
 
     this.resetAll();
+
+    let hash = this.route.snapshot.queryParams['hash'] || null;
+    if (hash) {
+      this.deck = [];
+      let names: string[] = this.decodeDeck(hash);
+      for (const name of names) {
+        let card: Card = this.cards.find(c => c.name === name) || empty;
+        this.deck.push(card);
+      }
+    }
   }
 
   ngOnDestroy(): void {
@@ -177,7 +192,6 @@ export class BuilderComponent {
   resetAll(): void {
     this.resetFilters();
     this.resetSearch();
-    this.resetDeck();
   }
 
   resetFilters(): void {
@@ -222,7 +236,10 @@ export class BuilderComponent {
       'isDiscard': false,
       'sets': [],
     });
-    this.openNotification('Filters reseted');
+    this.search.patchValue({
+      'query': '',
+    });
+    this.openNotification('Filters reseted to default!');
   }
 
   resetSearch(): void {
@@ -280,22 +297,29 @@ export class BuilderComponent {
     let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
     if (firstEmptyCard >= 0) {
       this.deck.splice(firstEmptyCard, 1, card);
-      this.openNotification('Added "' + card.name + '" to deck');
+      this.encodeDeck(this.deck);
+      this.openNotification('Added "' + card.name + '" to deck!');
     }
   }
 
-  removeFromDeck(card: Card): void {
-    let index = this.deck.findIndex(c => c.name == card.name);
-    if (index >= 0 && this.deck[index].name != 'Empty') {
+  removeFromDeck(index: number): void {
+    let card: Card = this.deck[index];
+    if (card.name !== 'Empty') {
       this.deck.splice(index, 1);
       this.deck.push(empty);
-      this.openNotification('Removed "' + card.name + '" from deck');
+      this.openNotification('Removed "' + card.name + '" from deck!');
     }
   }
 
   resetDeck(): void {
     this.deck = [empty, empty, empty, empty, empty];
-    this.openNotification('Deck restarted');
+    this.openNotification('Deck reseted to default!');
+  }
+
+  shareDeck(): void {
+    let hashed = this.encodeDeck(this.deck);
+    this.router.navigate(['builder'], { queryParams: { hash: hashed } });
+    this.openNotification('Share URL generated and copyied to clipboard!');
   }
 
   notEmptyCards(): number {
@@ -312,70 +336,77 @@ export class BuilderComponent {
 
   openNotification(text: string): void {
     this.snackBar.open(text, 'OK', {
-      horizontalPosition: 'right',
-      verticalPosition: 'top',
-      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      duration: 5000,
       panelClass: 'anachronism-notification',
     });
   }
 
-  isCardValid(card: Card): boolean {
+  isCardValid(card: Card, index: number): boolean|null {
     if (card.name === 'Empty') {
-      return false;
+      return null;
     }
 
-    // Initialize card properties object
-    const counts: { [key: string]: number } = {
-      warrior: 0,
-      weapon: 0,
-      armor: 0,
-      inspiration: 0,
-      special: 0
-    };
-    const modifiers: { [key: string]: boolean } = {
-      multiple_warriors: false,
-      multiple_weapons: false,
-      multiple_armors: false,
-      multiple_inspirations: false,
-      multiple_specials: false
-    };
+    const properties: { [key: string]: { count: number; limit: number; } } = {
+      warrior: { count: 0, limit: 1 },
+      weapon: { count: 0, limit: 1 },
+      armor: { count: 0, limit: 1 },
+      inspiration: { count: 0, limit: 1 },
+      special: { count: 0, limit: 1 }
+  };
 
-    // Count occurrences and determine if multiples are allowed
     for (const currentCard of this.deck.filter(c => c.name !== 'Empty')) {
-      console.log(currentCard.type.toLowerCase());
-      // Increment the count of the current card type
-      counts[currentCard.type.toLowerCase()]++;
-      // Check if the current card allows multiples
-      
-      modifiers['multiple_warriors'] = modifiers['multiple_warriors'] || currentCard['multiple_warriors'] == true;
-      modifiers['multiple_weapons'] = modifiers['multiple_weapons'] || currentCard['multiple_weapons'] == true;
-      modifiers['multiple_armors'] = modifiers['multiple_armors'] || currentCard['multiple_armors'] == true;
-      modifiers['multiple_inspirations'] = modifiers['multiple_inspirations'] || currentCard['multiple_inspirations'] == true;
-      modifiers['multiple_specials'] = modifiers['multiple_specials'] || currentCard['multiple_specials'] == true;
+      properties[currentCard.type.toLowerCase()].count++;
+      properties['warrior'].limit = 1;
+      properties['weapon'].limit = currentCard['multiple_weapons'] == false ? properties['weapon'].limit : 2;
+      properties['armor'].limit = currentCard['multiple_armors'] == false ? properties['armor'].limit : currentCard.name == "Sainte Jeanne d'Arc" ? 3 : 2;
+      properties['inspiration'].limit = currentCard['multiple_inspirations'] == false ? properties['inspiration'].limit : 2;
+      properties['special'].limit = currentCard['multiple_specials'] == false ? properties['special'].limit : 2;
     }
 
-    console.log(counts, modifiers);
+    // console.log(properties);
 
-    // Check if the card type exceeds the allowed limit
-    if (!modifiers['multiple_' + card.type.toLowerCase() + 's'] && counts[card.type.toLowerCase()] > 1) {
-      return false; // More than 1 cards of the same type without multiple property
+    if (properties[card.type.toLowerCase()].count > properties[card.type.toLowerCase()].limit) {
+      // console.log('More than 1 card with same type: ', card.name, properties);
+      return false; // more than 1 card with the same type, except multiples
     }
-    // Check if the card type exceeds the allowed limit
-    if (modifiers['multiple_' + card.type.toLowerCase() + 's'] && counts[card.type.toLowerCase()] > 2) {
-      return false; // More than 2 cards of the same type with multiple property
+
+    if (this.deck.filter(c => c.name == card.name).length > 1 && card.name !== 'Bokken') {
+      // console.log('Multiple card with same name: ' + card.name, properties);
+      return false; // more than 1 card with the same name, except Bokken
+    }
+
+    if (card.type === 'Warrior' && index !== 0) {
+      return false; // warrior not in the first position
     }
 
     return true;
   }
 
   isDeckValid(): boolean {
-    for (const card of this.deck) {
-      if (!this.isCardValid(card)) {
+    for (let i = 0; i < this.deck.length; i++) {
+      if (!this.isCardValid(this.deck[i], i)) {
         return false;
       }
     }
 
+    if (this.deck.filter(card => card.type === 'Warrior').length != 1) {
+      return false;
+    }
+
     return true;
+  }
+
+  encodeDeck(cards: Card[]): string {
+    const names: string[] = cards.map(card => card.name);
+    const encodedData = btoa(JSON.stringify(names)); // encode data to Base64 string
+    return encodedData;
+  }
+
+  decodeDeck(hash: string): any {
+    const decodedData = atob(hash); // decode Base64 string to original data
+    return JSON.parse(decodedData);
   }
 
 }
