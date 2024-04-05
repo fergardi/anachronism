@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, Inject } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
@@ -22,21 +22,41 @@ import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angula
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu'; 
 import { MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
-import { NgxResizeObserverModule } from 'ngx-resize-observer';
 
 import { Card, cards, empty} from '../model/card';
 
 @Component({
+  selector: 'app-info',
+  templateUrl: 'card.component.html',
+  styleUrl: './card.component.scss',
+  standalone: true,
+  imports: [
+    MatCardModule,
+  ],
+})
+export class CardComponent {
+  constructor(
+    public dialogRef: MatDialogRef<CardComponent>,
+    @Inject(MAT_DIALOG_DATA) public card: Card,
+  ) {}
+
+  close(): void {
+    this.dialogRef.close();
+  }
+}
+
+@Component({
   selector: 'app-rules',
-  templateUrl: './rules.sheet.html',
-  styleUrl: './rules.sheet.scss',
+  templateUrl: './rules.component.html',
+  styleUrl: './rules.component.scss',
   standalone: true,
   imports: [],
 })
-export class RulesSheet {
-  constructor(private rulesRef: MatBottomSheetRef<RulesSheet>) {}
+export class RulesComponent {
+  constructor(private rulesRef: MatBottomSheetRef<RulesComponent>) {}
 }
 
 @Component({
@@ -63,7 +83,6 @@ export class RulesSheet {
     MatSlideToggleModule,
     MatBadgeModule,
     MatBottomSheetModule,
-    NgxResizeObserverModule,
     MatMenuModule,
     MatPaginatorModule,
   ],
@@ -109,8 +128,9 @@ export class BuilderComponent implements OnDestroy {
     private media: MediaMatcher,
     private router: Router,
     private route: ActivatedRoute,
+    private dialog: MatDialog,
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.mobileQuery = media.matchMedia('(max-width: 850px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
 
@@ -298,7 +318,9 @@ export class BuilderComponent implements OnDestroy {
       ;
   }
 
-  addToDeck(card: Card): void {
+  addToDeck(card: Card, event: Event): void {
+    event.stopPropagation();
+
     let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
     if (firstEmptyCard >= 0) {
       this.deck.splice(firstEmptyCard, 1, card);
@@ -339,7 +361,7 @@ export class BuilderComponent implements OnDestroy {
   }
 
   openRules(event: MouseEvent): void {
-    this.rulesRef.open(RulesSheet);
+    this.rulesRef.open(RulesComponent);
   }
 
   openNotification(text: string): void {
@@ -417,6 +439,16 @@ export class BuilderComponent implements OnDestroy {
   onPageChange(event: any) {
     this.pageIndex = event.pageIndex;
     this.pageSize = event.pageSize;
+  }
+
+  openCard(card: Card): void {
+    this.dialog.open(CardComponent, {
+      data: card,
+      width: 'auto',
+      maxWidth: 'none',
+      height: 'auto',
+      maxHeight: 'none',
+    });
   }
 
   ngOnDestroy(): void {

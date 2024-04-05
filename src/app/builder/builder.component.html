@@ -219,8 +219,11 @@
     <main class="app-main">
       <div class="grid-container">
         <div class="grid-item" *ngFor="let card of paginatedCards()">
-          <mat-card class="anachronism-card" (click)="addToDeck(card)">
+          <mat-card class="list-card" (click)="openCard(card)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
+            <button mat-fab color="primary" class="add-button" (click)="addToDeck(card, $event)">
+              <mat-icon>add</mat-icon>
+            </button>
           </mat-card>
         </div>
       </div>
@@ -240,7 +243,7 @@
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
-      <mat-card class="anachronism-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card, i) === false ? 'invalid-card' : ''" cdkDrag (click)="removeFromDeck(i)">
+      <mat-card class="deck-card" *ngFor="let card of deck; let i = index" [style.--index]="i" [class]="isCardValid(card, i) === false ? 'invalid-card' : ''" cdkDrag (click)="removeFromDeck(i)">
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>

@@ -44,7 +44,7 @@
       padding: 10px;
       position: relative;
 
-      .anachronism-card {
+      .deck-card {
         border: 2px solid rgba(0, 0, 0, 1);
         position: absolute;
         width: calc(100% - 20px); // 100% - 10 padding left - 10 padding right
@@ -52,7 +52,7 @@
         transition: margin-top 0.3s ease;
         cursor: move;
 
-        &:hover ~ .anachronism-card {
+        &:hover ~ .deck-card {
           margin-top: calc((33% * (var(--index))) + 100% + 10px);
         }
 
@@ -129,7 +129,7 @@
         }
       }
 
-      .anachronism-card {
+      .list-card {
         border: 2px solid rgba(0, 0, 0, 1);
         transition: scale 0.3s ease;
         cursor: pointer;
@@ -139,6 +139,12 @@
           scale: 1.05;
           z-index: 1000;
           cursor: pointer;
+        }
+
+        .add-button {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
         }
       }
 
