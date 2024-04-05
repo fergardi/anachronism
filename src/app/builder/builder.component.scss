@@ -38,18 +38,6 @@
       }
     }
 
-    .info-button {
-      font-family: 'ElysiumBold';
-      font-size: 20px;
-
-      .invalid-deck .mat-badge-content {
-        font-family: 'Material Icons';
-        color: var(--warn-color);
-        background: none;
-        font-size: 1.1rem;
-      }
-    }
-
     .sidenav-deck {
       height: calc(100% - 84px); // - 64px - padding
       overflow: hidden auto;
@@ -63,14 +51,22 @@
         margin-top: calc(33% * (var(--index))); /* adjust margin-top to control overlap */
         transition: margin-top 0.3s ease;
         cursor: move;
+
         &:hover ~ .anachronism-card {
           margin-top: calc((33% * (var(--index))) + 100% + 10px);
         }
+
         &.invalid-card {
           border-color: var(--warn-color);
         }
       }
 
+    }
+
+    .trash-button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
     }
 
     .share-button {
@@ -112,12 +108,17 @@
     .app-main {
       height: 100%;
 
-      .flexbox-container {
+      .grid-container {
         padding: 5px;
         height: calc(100% - 64px);
         overflow: hidden auto;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: auto;
+        grid-gap: 0px;
       
-        .flexbox-item {
+        .grid-item {
           padding: 5px;
         }
       }
@@ -126,9 +127,10 @@
         border: 2px solid rgba(0, 0, 0, 1);
         transition: scale 0.3s ease;
         cursor: pointer;
+
         &:hover {
           border-color: var(--primary-color);
-          scale: 1.1;
+          scale: 1.05;
           z-index: 1000;
           cursor: pointer;
         }

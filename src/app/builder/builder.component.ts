@@ -1,5 +1,5 @@
-import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, ChangeDetectorRef } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -22,6 +22,7 @@ import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angula
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
+import { NgxResizeObserverModule } from 'ngx-resize-observer';
 
 import { Card, cards, empty} from '../model/card';
 
@@ -60,9 +61,10 @@ export class RulesSheet {
     MatSlideToggleModule,
     MatBadgeModule,
     MatBottomSheetModule,
+    NgxResizeObserverModule,
   ],
   templateUrl: './builder.component.html',
-  styleUrl: './builder.component.scss'
+  styleUrl: './builder.component.scss',
 })
 export class BuilderComponent {
   mobileQuery: MediaQueryList;
@@ -105,8 +107,6 @@ export class BuilderComponent {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
-
-    this.deck = [empty, empty, empty, empty, empty];
 
     this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
@@ -174,19 +174,18 @@ export class BuilderComponent {
 
     this.resetAll();
 
-    let hash = this.route.snapshot.queryParams['hash'] || null;
+    this.deck = [];
+
+    let hash = this.route.snapshot.queryParams['deck'] || null;
     if (hash) {
-      this.deck = [];
       let names: string[] = this.decodeDeck(hash);
       for (const name of names) {
         let card: Card = this.cards.find(c => c.name === name) || empty;
         this.deck.push(card);
       }
+    } else {
+      this.deck = [empty, empty, empty, empty, empty];
     }
-  }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this.mobileQueryListener);
   }
 
   resetAll(): void {
@@ -299,6 +298,8 @@ export class BuilderComponent {
       this.deck.splice(firstEmptyCard, 1, card);
       this.encodeDeck(this.deck);
       this.openNotification('Added "' + card.name + '" to deck!');
+    } else {
+      this.openNotification('Deck is full of cards!');
     }
   }
 
@@ -313,12 +314,13 @@ export class BuilderComponent {
 
   resetDeck(): void {
     this.deck = [empty, empty, empty, empty, empty];
+    this.router.navigate(['builder']);
     this.openNotification('Deck reseted to default!');
   }
 
   shareDeck(): void {
-    let hashed = this.encodeDeck(this.deck);
-    this.router.navigate(['builder'], { queryParams: { hash: hashed } });
+    let hash = this.encodeDeck(this.deck);
+    this.router.navigate(['builder'], { queryParams: { deck: hash } });
     this.openNotification('Share URL generated and copyied to clipboard!');
   }
 
@@ -345,7 +347,7 @@ export class BuilderComponent {
 
   isCardValid(card: Card, index: number): boolean|null {
     if (card.name === 'Empty') {
-      return null;
+      return null; // to avoid red borders on empty cards
     }
 
     const properties: { [key: string]: { count: number; limit: number; } } = {
@@ -354,7 +356,7 @@ export class BuilderComponent {
       armor: { count: 0, limit: 1 },
       inspiration: { count: 0, limit: 1 },
       special: { count: 0, limit: 1 }
-  };
+    };
 
     for (const currentCard of this.deck.filter(c => c.name !== 'Empty')) {
       properties[currentCard.type.toLowerCase()].count++;
@@ -365,15 +367,11 @@ export class BuilderComponent {
       properties['special'].limit = currentCard['multiple_specials'] == false ? properties['special'].limit : 2;
     }
 
-    // console.log(properties);
-
     if (properties[card.type.toLowerCase()].count > properties[card.type.toLowerCase()].limit) {
-      // console.log('More than 1 card with same type: ', card.name, properties);
       return false; // more than 1 card with the same type, except multiples
     }
 
     if (this.deck.filter(c => c.name == card.name).length > 1 && card.name !== 'Bokken') {
-      // console.log('Multiple card with same name: ' + card.name, properties);
       return false; // more than 1 card with the same name, except Bokken
     }
 
@@ -391,10 +389,6 @@ export class BuilderComponent {
       }
     }
 
-    if (this.deck.filter(card => card.type === 'Warrior').length != 1) {
-      return false;
-    }
-
     return true;
   }
 
@@ -404,9 +398,13 @@ export class BuilderComponent {
     return encodedData;
   }
 
-  decodeDeck(hash: string): any {
+  decodeDeck(hash: string): string[] {
     const decodedData = atob(hash); // decode Base64 string to original data
     return JSON.parse(decodedData);
+  }
+
+  ngOnDestroy(): void {
+    this.mobileQuery.removeListener(this.mobileQueryListener);
   }
 
 }

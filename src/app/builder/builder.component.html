@@ -2,13 +2,13 @@
   <mat-sidenav class="app-sidenav" #left [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
     <mat-toolbar>
       <button mat-icon-button (click)="left.toggle()">
-        <mat-icon class="primary-color">keyboard_arrow_left</mat-icon>
+        <mat-icon color="primary">keyboard_arrow_left</mat-icon>
       </button>
       <span class="flex-separator"></span>
       <h3 class="primary-color">FILTERS</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="resetFilters()">
-        <mat-icon class="primary-color">filter_list_off</mat-icon>
+        <mat-icon color="primary">filter_list_off</mat-icon>
       </button>
     </mat-toolbar>
     <form [formGroup]="filters" class="sidenav-filters">
@@ -178,14 +178,13 @@
           <mat-chip-option *ngFor="let s of sets">{{ s }}</mat-chip-option>
         </mat-chip-listbox>
       </div>
-      <!--<div>{{ filters.value | json }}</div>-->
     </form>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
     <mat-toolbar class="app-sidenav-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
         <button mat-icon-button (click)="left.toggle()">
-          <mat-icon class="primary-color">filter_list</mat-icon>
+          <mat-icon color="primary">filter_list</mat-icon>
         </button>
         <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgeOverlap="false">CARDS</div></span>
       </div>
@@ -196,22 +195,22 @@
               <mat-icon matPrefix class="primary-color">search</mat-icon>
               <input matInput placeholder="DATACHRONISM" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
-                <mat-icon class="primary-color">close</mat-icon>
+                <mat-icon color="primary">close</mat-icon>
               </button>
             </mat-form-field>
           </form>
         </div>
       </div>
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
-        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">DECK</div></span>
+        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">USED</div></span>
         <button mat-icon-button (click)="right.toggle()">
-          <mat-icon class="primary-color">style</mat-icon>
+          <mat-icon color="primary">style</mat-icon>
         </button>
       </div>
     </mat-toolbar>
     <main class="app-main">
-      <div class="flexbox-container" fxLayout="row wrap" fxLayoutAlign="start start">
-        <div class="flexbox-item" fxFlex.xl="12.5" fxFlex.lg="20" fxFlex.md="25" fxFlex.sm="33" fxFlex.xs="50" *ngFor="let card of filteredCards()">
+      <div class="grid-container">
+        <div class="grid-item" *ngFor="let card of filteredCards()">
           <mat-card class="anachronism-card" (click)="addToDeck(card)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
@@ -221,18 +220,14 @@
   </mat-sidenav-content>
   <mat-sidenav class="app-sidenav" #right position="end" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
     <mat-toolbar>
-      <button mat-icon-button (click)="resetDeck()">
-        <mat-icon class="primary-color">delete</mat-icon>
+      <button mat-icon-button (click)="openRules($event)">
+        <mat-icon [color]="isDeckValid() ? 'primary' : 'warn'">help</mat-icon>
       </button>
       <span class="flex-separator"></span>
-      <h3 class="primary-color">
-        <button mat-stroked-button class="info-button" color="primary" (click)="openRules($event)">
-          <div matBadge="priority_high" matBadgeOverlap="false" matBadgeColor="warn" [matBadgeHidden]="isDeckValid()" class="invalid-deck">RULES</div>
-        </button>
-      </h3>
+      <h3 class="primary-color">DECK</h3>
       <span class="flex-separator"></span>
       <button mat-icon-button (click)="right.toggle()">
-        <mat-icon class="primary-color">keyboard_arrow_right</mat-icon>
+        <mat-icon color="primary">keyboard_arrow_right</mat-icon>
       </button>
     </mat-toolbar>
     <div class="sidenav-deck" cdkDropList (cdkDropListDropped)="drop($event)">
@@ -240,6 +235,9 @@
         <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
       </mat-card>
     </div>
+    <button mat-fab color="warn" class="trash-button" (click)="resetDeck()">
+      <mat-icon>delete</mat-icon>
+    </button>
     <button mat-fab color="primary" class="share-button" (click)="shareDeck()">
       <mat-icon>share</mat-icon>
     </button>
