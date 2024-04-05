@@ -13,7 +13,7 @@
     }
     
     .sidenav-filters {
-      height: calc(100% - 74px); // - 64px - padding
+      height: calc(100% - 74px); // 64px + 5px padding top + 5px padding bottom
       padding: 5px;
       overflow: hidden auto;
 
@@ -39,7 +39,7 @@
     }
 
     .sidenav-deck {
-      height: calc(100% - 84px); // - 64px - padding
+      height: calc(100% - 84px); // 64px + 10 padding top + 10 padding bottom
       overflow: hidden auto;
       padding: 10px;
       position: relative;
@@ -47,7 +47,7 @@
       .anachronism-card {
         border: 2px solid rgba(0, 0, 0, 1);
         position: absolute;
-        width: calc(100% - 20px); // 100% - padding
+        width: calc(100% - 20px); // 100% - 10 padding left - 10 padding right
         margin-top: calc(33% * (var(--index))); /* adjust margin-top to control overlap */
         transition: margin-top 0.3s ease;
         cursor: move;
@@ -106,11 +106,17 @@
     }
 
     .app-main {
-      height: 100%;
+      height: calc(100% - 69px); // 64 + 5 padding bottom
+
+      .card-paginator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
       .grid-container {
         padding: 5px;
-        height: calc(100% - 64px);
+        height: calc(100% - 61px); // 56 + 5 padding bottom
         overflow: hidden auto;
 
         display: grid;
@@ -172,4 +178,16 @@
     text-align: center;
     vertical-align: middle;
   }
+}
+
+.loading-spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+  pointer-events: all;
 }

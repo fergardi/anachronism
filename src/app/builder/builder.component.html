@@ -1,6 +1,6 @@
 <mat-sidenav-container class="app-sidenav-container" autosize>
   <mat-sidenav class="app-sidenav" #left [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
-    <mat-toolbar>
+    <mat-toolbar class="mat-elevation-z12">
       <button mat-icon-button (click)="left.toggle()">
         <mat-icon color="primary">keyboard_arrow_left</mat-icon>
       </button>
@@ -181,7 +181,7 @@
     </form>
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
-    <mat-toolbar class="app-sidenav-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-toolbar class="app-sidenav-toolbar mat-elevation-z12" fxLayout="row" fxLayoutAlign="space-between center">
       <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
         <button mat-icon-button (click)="left.toggle()">
           <mat-icon color="primary">filter_list</mat-icon>
@@ -192,7 +192,15 @@
         <div class="search-container">
           <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
-              <mat-icon matPrefix class="primary-color">search</mat-icon>
+              <button matPrefix mat-icon-button [matMenuTriggerFor]="language">
+                <mat-icon color="primary">search</mat-icon>
+              </button>
+              <mat-menu #language="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>language</mat-icon>
+                  <span>English</span>
+                </button>
+              </mat-menu>
               <input matInput placeholder="DATACHRONISM" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
                 <mat-icon color="primary">close</mat-icon>
@@ -210,16 +218,17 @@
     </mat-toolbar>
     <main class="app-main">
       <div class="grid-container">
-        <div class="grid-item" *ngFor="let card of filteredCards()">
+        <div class="grid-item" *ngFor="let card of paginatedCards()">
           <mat-card class="anachronism-card" (click)="addToDeck(card)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
           </mat-card>
         </div>
       </div>
+      <mat-paginator #paginator class="card-paginator mat-elevation-z12" (page)="onPageChange($event)" [length]="filteredCards().length" [pageSize]="pageSize" [pageSizeOptions]="[50, 250, 1000]" [pageIndex]="pageIndex" showFirstLastButtons="true"></mat-paginator>
     </main>
   </mat-sidenav-content>
   <mat-sidenav class="app-sidenav" #right position="end" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches">
-    <mat-toolbar>
+    <mat-toolbar class="mat-elevation-z12">
       <button mat-icon-button (click)="openRules($event)">
         <mat-icon [color]="isDeckValid() ? 'primary' : 'warn'">help</mat-icon>
       </button>

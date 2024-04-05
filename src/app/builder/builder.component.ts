@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
@@ -20,6 +20,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet'; 
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu'; 
+import { MatPaginatorModule } from '@angular/material/paginator'; 
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { NgxResizeObserverModule } from 'ngx-resize-observer';
@@ -62,14 +64,18 @@ export class RulesSheet {
     MatBadgeModule,
     MatBottomSheetModule,
     NgxResizeObserverModule,
+    MatMenuModule,
+    MatPaginatorModule,
   ],
   templateUrl: './builder.component.html',
   styleUrl: './builder.component.scss',
 })
-export class BuilderComponent {
+export class BuilderComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
   cards: Card[] = cards;
+  pageIndex: number = 0;
+  pageSize: number = 50;
   deck: Card[] = [];
 
   filters: FormGroup;
@@ -401,6 +407,16 @@ export class BuilderComponent {
   decodeDeck(hash: string): string[] {
     const decodedData = atob(hash); // decode Base64 string to original data
     return JSON.parse(decodedData);
+  }
+
+  paginatedCards(): any[] {
+    const startIndex = this.pageIndex * this.pageSize;
+    return this.filteredCards().slice(startIndex, startIndex + this.pageSize);
+  }
+
+  onPageChange(event: any) {
+    this.pageIndex = event.pageIndex;
+    this.pageSize = event.pageSize;
   }
 
   ngOnDestroy(): void {
