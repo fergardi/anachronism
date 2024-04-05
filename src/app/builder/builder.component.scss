@@ -82,11 +82,11 @@
 
     .app-sidenav-toolbar {
 
-      .mat-badge-content {
+      ::ng-deep .mat-badge-content {
         border-radius: 50px;
         width: auto;
         padding: 0 10px;
-        z-index: 1000;
+        z-index: 9999;
       }
       
       .search-container {
@@ -106,21 +106,35 @@
     }
 
     .app-main {
-      height: calc(100% - 69px); // 64 + 5 padding bottom
+      height: calc(100% - 66px); // 56 + 5 padding top + 5 padding bottom
 
       .card-paginator {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 960px) {
+        .card-paginator {
+          ::ng-deep .mat-mdc-paginator-page-size-label {
+            display: none;
+          }
+          ::ng-deep .mat-mdc-paginator-range-label {
+            display: none;
+          }
+        }
       }
 
       .grid-container {
         padding: 5px;
-        height: calc(100% - 61px); // 56 + 5 padding bottom
+        height: calc(100% - 66px); // 56 + 5 padding top + 5 padding bottom
         overflow: hidden auto;
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-auto-rows: auto;
         grid-gap: 0px;
       
@@ -166,7 +180,7 @@
   transition: transform 0.3 ease;
 }
 
-.anachronism-card.cdk-drop-list-dragging .anachronism-card:not(.cdk-drag-placeholder) {
+.deck-card.cdk-drop-list-dragging .deck-card:not(.cdk-drag-placeholder) {
   transition: transform 0.3 ease;
 }
 

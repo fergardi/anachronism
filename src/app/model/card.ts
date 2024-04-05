@@ -149,6 +149,11 @@ export const empty: Card = {
   grid_4_3: ""
 };
 
+export interface CardResult {
+  card: Card;
+  event: Event;
+};
+
 export const cards: Card[] = [
   {
     name: "Alexander the Great",

@@ -100,6 +100,11 @@ $datachronism-theme: mat.define-dark-theme((
   src: local("ElysiumBold"), url(./assets/fonts/ElysiumBoldPlain.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "ElysiumItalic";
+  src: local("ElysiumItalic"), url(./assets/fonts/ElysiumBookItalicPlain.ttf) format("truetype");
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 
@@ -134,8 +139,9 @@ body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 .mat-mdc-snack-bar-container {
   --mat-snack-bar-button-color: var(--primary-color);
   --mdc-snackbar-supporting-text-color: var(--primary-color);
+  margin-top: 66px !important;
 
-  &.anachronism-notification {
+  &.datachronism-notification {
     --mdc-snackbar-container-color: var(--background-color);
   }  
 }

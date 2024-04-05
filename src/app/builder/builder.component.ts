@@ -1,9 +1,10 @@
-import { Component, ChangeDetectorRef, OnDestroy, Inject } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, Inject, ViewChild, AfterViewInit } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Router, ActivatedRoute } from '@angular/router';
+import { A11yModule } from '@angular/cdk/a11y';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -21,12 +22,12 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatBottomSheet, MatBottomSheetModule, MatBottomSheetRef } from '@angular/material/bottom-sheet'; 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu'; 
-import { MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'; 
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 
-import { Card, cards, empty} from '../model/card';
+import { Card, CardResult, cards, empty} from '../model/card';
 
 @Component({
   selector: 'app-info',
@@ -35,6 +36,9 @@ import { Card, cards, empty} from '../model/card';
   standalone: true,
   imports: [
     MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    A11yModule,
   ],
 })
 export class CardComponent {
@@ -42,6 +46,11 @@ export class CardComponent {
     public dialogRef: MatDialogRef<CardComponent>,
     @Inject(MAT_DIALOG_DATA) public card: Card,
   ) {}
+
+  addToDeck(card: Card, event: Event): void {
+    event.stopPropagation();
+    this.dialogRef.close({card: card, event: event});
+  }
 
   close(): void {
     this.dialogRef.close();
@@ -89,8 +98,9 @@ export class RulesComponent {
   templateUrl: './builder.component.html',
   styleUrl: './builder.component.scss',
 })
-export class BuilderComponent implements OnDestroy {
+export class BuilderComponent implements AfterViewInit, OnDestroy {
   mobileQuery: MediaQueryList;
+  @ViewChild('paginator') paginator!: MatPaginator;
 
   cards: Card[] = cards;
   pageIndex: number = 0;
@@ -130,7 +140,7 @@ export class BuilderComponent implements OnDestroy {
     private route: ActivatedRoute,
     private dialog: MatDialog,
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 850px)');
+    this.mobileQuery = media.matchMedia('(max-width: 900px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
 
@@ -198,8 +208,6 @@ export class BuilderComponent implements OnDestroy {
       query: this.formBuilder.control(''),
     });
 
-    this.resetAll();
-
     this.deck = [];
 
     let hash = this.route.snapshot.queryParams['deck'] || null;
@@ -214,9 +222,22 @@ export class BuilderComponent implements OnDestroy {
     }
   }
 
+  ngAfterViewInit(): void {
+    this.filters.valueChanges.subscribe(values => {
+      this.paginator.firstPage();
+    });
+
+    this.search.valueChanges.subscribe(values => {
+      this.paginator.firstPage();
+    });
+
+    this.resetAll();
+  }
+
   resetAll(): void {
     this.resetFilters();
     this.resetSearch();
+    this.resetName();
   }
 
   resetFilters(): void {
@@ -264,12 +285,19 @@ export class BuilderComponent implements OnDestroy {
     this.search.patchValue({
       'query': '',
     });
+    this.paginator.firstPage();
     this.openNotification('Filters reseted to default!');
   }
 
   resetSearch(): void {
     this.search.patchValue({
-      'query': ''
+      'query': '',
+    });
+  }
+
+  resetName(): void {
+    this.filters.patchValue({
+      'name': '',
     });
   }
 
@@ -367,9 +395,9 @@ export class BuilderComponent implements OnDestroy {
   openNotification(text: string): void {
     this.snackBar.open(text, 'OK', {
       horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-      duration: 5000,
-      panelClass: 'anachronism-notification',
+      verticalPosition: 'top',
+      duration: 4000,
+      panelClass: 'datachronism-notification',
     });
   }
 
@@ -442,12 +470,18 @@ export class BuilderComponent implements OnDestroy {
   }
 
   openCard(card: Card): void {
-    this.dialog.open(CardComponent, {
+    let dialogRef = this.dialog.open(CardComponent, {
       data: card,
       width: 'auto',
       maxWidth: 'none',
       height: 'auto',
       maxHeight: 'none',
+    });
+
+    dialogRef.afterClosed().subscribe((result: CardResult) => {
+      if (result) {
+        this.addToDeck(result.card, result.event);
+      }
     });
   }
 

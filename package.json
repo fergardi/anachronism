@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "pages": "ng deploy --base-href=/datachronism/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

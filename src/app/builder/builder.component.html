@@ -15,7 +15,10 @@
       <div class="filter-container">
         <label><b>Name</b></label>
         <mat-form-field appareance="outline">
-          <input matInput placeholder="Name of the Card" formControlName="name"/>
+          <input matInput placeholder="Name of the Card" formControlName="name">
+          <button matSuffix mat-icon-button (click)="resetName()">
+            <mat-icon color="primary">close</mat-icon>
+          </button>
         </mat-form-field>
       </div>
       <div class="filter-container">
@@ -130,7 +133,7 @@
       <div class="filter-container">
         <label><b>Ability</b></label>
         <mat-form-field appareance="outline">
-          <textarea matInput placeholder="Ability, Reveal, Action or Text" formControlName="text"></textarea>
+          <textarea matInput placeholder="Ability, Reveal, Action, Text..." formControlName="text"></textarea>
         </mat-form-field>
       </div>
       <div class="filter-container">
@@ -182,13 +185,12 @@
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
     <mat-toolbar class="app-sidenav-toolbar mat-elevation-z12" fxLayout="row" fxLayoutAlign="space-between center">
-      <div fxFlex="20" fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex="15" fxLayout="row" fxLayoutAlign="start center">
         <button mat-icon-button (click)="left.toggle()">
-          <mat-icon color="primary">filter_list</mat-icon>
+          <mat-icon color="primary" matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgePosition="after" matBadgeOverlap="false" aria-hidden="false">filter_list</mat-icon>
         </button>
-        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgeOverlap="false">CARDS</div></span>
       </div>
-      <div fxFlex="60">
+      <div fxFlex="40" fxFlex.lt-lg="70">
         <div class="search-container">
           <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
@@ -201,7 +203,7 @@
                   <span>English</span>
                 </button>
               </mat-menu>
-              <input matInput placeholder="DATACHRONISM" formControlName="query"/>
+              <input matInput placeholder="Datachronism" formControlName="query"/>
               <button matSuffix mat-icon-button (click)="resetSearch()">
                 <mat-icon color="primary">close</mat-icon>
               </button>
@@ -209,21 +211,22 @@
           </form>
         </div>
       </div>
-      <div fxFlex="20" fxLayout="row" fxLayoutAlign="end center">
-        <span class="primary-color" fxShow fxHide.lt-md><div matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false">USED</div></span>
+      <div fxFlex="15" fxLayout="row" fxLayoutAlign="end center">
         <button mat-icon-button (click)="right.toggle()">
-          <mat-icon color="primary">style</mat-icon>
+          <mat-icon color="primary" matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false" aria-hidden="false">style</mat-icon>
         </button>
       </div>
     </mat-toolbar>
     <main class="app-main">
       <div class="grid-container">
         <div class="grid-item" *ngFor="let card of paginatedCards()">
-          <mat-card class="list-card" (click)="openCard(card)">
+          <mat-card class="list-card" (click)="addToDeck(card, $event)">
             <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name">
+            <!--
             <button mat-fab color="primary" class="add-button" (click)="addToDeck(card, $event)">
               <mat-icon>add</mat-icon>
             </button>
+            -->
           </mat-card>
         </div>
       </div>
