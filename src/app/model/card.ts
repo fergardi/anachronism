@@ -14068,7 +14068,7 @@ export const cards: Card[] = [
     grid_4_3: ""
   },
   {
-    name: "Gengis Khan",
+    name: "Genghis Khan",
     culture: "Mongol",
     type: "Warrior",
     subtype: "Male",
@@ -14882,7 +14882,7 @@ export const cards: Card[] = [
     grid_4_3: ""
   },
   {
-    name: "Kubulai Khan",
+    name: "Kublai Khan",
     culture: "Mongol",
     type: "Warrior",
     subtype: "Male",
@@ -30792,7 +30792,7 @@ export const cards: Card[] = [
     grid_4_3: ""
   },
   {
-    name: "Prinz Mikhial Skopin-Shuisky",
+    name: "Prinz Mikhail Skopin-Shuisky",
     culture: "Russian",
     type: "Warrior",
     subtype: "Male",

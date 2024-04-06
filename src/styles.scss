@@ -137,12 +137,11 @@ body { margin: 0; font-family: ElysiumNormal, "Helvetica Neue", sans-serif; }
 }
 
 .mat-mdc-snack-bar-container {
-  --mat-snack-bar-button-color: var(--primary-color);
-  --mdc-snackbar-supporting-text-color: var(--primary-color);
-  margin-top: 66px !important;
+  --mat-snack-bar-button-color: var(--background-color);
+  --mdc-snackbar-supporting-text-color: var(--background-color);
 
   &.datachronism-notification {
-    --mdc-snackbar-container-color: var(--background-color);
+    --mdc-snackbar-container-color: var(--primary-color);
   }  
 }
 

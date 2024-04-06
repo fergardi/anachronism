@@ -394,7 +394,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
 
   openNotification(text: string): void {
     this.snackBar.open(text, 'OK', {
-      horizontalPosition: 'center',
+      horizontalPosition: 'right',
       verticalPosition: 'top',
       duration: 4000,
       panelClass: 'datachronism-notification',
