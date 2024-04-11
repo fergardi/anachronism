@@ -1,8 +1,8 @@
 <div class="app-card">
-  <mat-card class="list-card" (click)="close()">
+  <mat-card class="list-card" (click)="close()" cdkTrapFocus>
     <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name" class="info-card">
   </mat-card>
-  <button mat-fab color="primary" class="add-button" (click)="addToDeck(card, $event)" cdkTrapFocus>
+  <button mat-fab color="primary" class="add-button" (click)="addCardToDeck(card, $event)">
     <mat-icon>add</mat-icon>
   </button>
 </div>

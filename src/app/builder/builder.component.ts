@@ -47,7 +47,7 @@ export class CardComponent {
     @Inject(MAT_DIALOG_DATA) public card: Card,
   ) {}
 
-  addToDeck(card: Card, event: Event): void {
+  addCardToDeck(card: Card, event: Event): void {
     event.stopPropagation();
     this.dialogRef.close({card: card, event: event});
   }
@@ -346,7 +346,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
       ;
   }
 
-  addToDeck(card: Card, event: Event): void {
+  addCardToDeck(card: Card, event: Event): void {
     event.stopPropagation();
 
     let firstEmptyCard: number = this.deck.findIndex(c => c.name === empty.name);
@@ -354,17 +354,25 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
       this.deck.splice(firstEmptyCard, 1, card);
       this.encodeDeck(this.deck);
       this.openNotification('Added "' + card.name + '" to deck!');
+      let error = this.isCardValid(card, firstEmptyCard);
+      if (error) {
+        this.openNotification(error);
+      }
     } else {
       this.openNotification('Deck is full of cards!');
     }
   }
 
-  removeFromDeck(index: number): void {
+  removeCardFromDeck(index: number): void {
     let card: Card = this.deck[index];
     if (card.name !== 'Empty') {
       this.deck.splice(index, 1);
       this.deck.push(empty);
       this.openNotification('Removed "' + card.name + '" from deck!');
+      let error = this.isDeckValid();
+      if (error) {
+        this.openNotification(error);
+      }
     }
   }
 
@@ -401,7 +409,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  isCardValid(card: Card, index: number): boolean|null {
+  isCardValid(card: Card, index: number): string|null {
     if (card.name === 'Empty') {
       return null; // to avoid red borders on empty cards
     }
@@ -423,29 +431,30 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
       properties['special'].limit = currentCard['multiple_specials'] == false ? properties['special'].limit : 2;
     }
 
-    if (properties[card.type.toLowerCase()].count > properties[card.type.toLowerCase()].limit) {
-      return false; // more than 1 card with the same type, except multiples
+    if (this.deck.filter(c => c.name == card.name).length > 1 && card.name !== 'Bokken') {
+      return "More than 1 card with the same name!";
     }
 
-    if (this.deck.filter(c => c.name == card.name).length > 1 && card.name !== 'Bokken') {
-      return false; // more than 1 card with the same name, except Bokken
+    if (properties[card.type.toLowerCase()].count > properties[card.type.toLowerCase()].limit) {
+      return "More than 1 card with the same type!";
     }
 
     if (card.type === 'Warrior' && index !== 0) {
-      return false; // warrior not in the first position
+      return "Warrior not in the first position!";
     }
 
-    return true;
+    return null;
   }
 
-  isDeckValid(): boolean {
+  isDeckValid(): string|null {
     for (let i = 0; i < this.deck.length; i++) {
-      if (!this.isCardValid(this.deck[i], i)) {
-        return false;
+      let error = this.isCardValid(this.deck[i], i);
+      if (error !== null) {
+        return error;
       }
     }
 
-    return true;
+    return null;
   }
 
   encodeDeck(cards: Card[]): string {
@@ -480,7 +489,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
 
     dialogRef.afterClosed().subscribe((result: CardResult) => {
       if (result) {
-        this.addToDeck(result.card, result.event);
+        this.addCardToDeck(result.card, result.event);
       }
     });
   }
