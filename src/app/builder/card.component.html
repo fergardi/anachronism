@@ -1,8 +1,28 @@
-<div class="app-card">
-  <mat-card class="list-card" (click)="close()" cdkTrapFocus>
-    <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name" class="info-card">
-  </mat-card>
-  <button mat-fab color="primary" class="add-button" (click)="addCardToDeck(card, $event)">
-    <mat-icon>add</mat-icon>
-  </button>
-</div>
+<mat-card tabindex="0">
+  <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name" class="info-card">
+  <div class="card-information" fxShow fxHide.lt-md>
+    <mat-card-header fxLayout="row">
+      <mat-card-title-group>
+        <mat-card-title class="primary-color">{{ card.name.toUpperCase() }}</mat-card-title>
+        <mat-card-subtitle>{{ card.type }}</mat-card-subtitle>
+      </mat-card-title-group>
+      <div fxFlex></div>
+      <button mat-icon-button color="primary" (click)="close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-chip highlighted>{{ card.culture }}</mat-chip>&nbsp;
+      <mat-chip highlighted>{{ card.type }}</mat-chip>&nbsp;
+      <mat-chip highlighted>{{ card.subtype }}</mat-chip>&nbsp;
+      <mat-chip highlighted color="warn" *ngIf="card.element">{{ card.element }}</mat-chip>
+    </mat-card-content>
+    <mat-card-content>{{ card.text }}</mat-card-content>
+    <mat-card-content class="italic-font">{{ card.flavor }}</mat-card-content>
+    <mat-card-content><b>Analects:</b> {{ card.analects || '-' }}</mat-card-content>
+    <mat-card-content class="italic-font">Illustrated by {{ card.artist }}</mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="addCardToDeck(card, $event)">ADD TO DECK</button>
+    </mat-card-actions>
+  </div>
+</mat-card>

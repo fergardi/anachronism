@@ -4,7 +4,6 @@ import { CommonModule, JsonPipe } from '@angular/common';
 import { FormGroup, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray } from '@angular/cdk/drag-drop';
 import { Router, ActivatedRoute } from '@angular/router';
-import { A11yModule } from '@angular/cdk/a11y';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -35,10 +34,12 @@ import { Card, CardResult, cards, empty} from '../model/card';
   styleUrl: './card.component.scss',
   standalone: true,
   imports: [
+    CommonModule,
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    A11yModule,
+    MatChipsModule,
+    FlexLayoutModule,
   ],
 })
 export class CardComponent {

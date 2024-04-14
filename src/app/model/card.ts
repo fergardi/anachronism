@@ -72,6 +72,7 @@ export interface Card {
   grid_4_1: string;
   grid_4_2: string;
   grid_4_3: string;
+  analects: string;
 };
 
 export const empty: Card = {
@@ -146,7 +147,8 @@ export const empty: Card = {
   grid_3_3: "",
   grid_4_1: "",
   grid_4_2: "",
-  grid_4_3: ""
+  grid_4_3: "",
+  analects: ""
 };
 
 export interface CardResult {
@@ -227,7 +229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Oracle of Delphi",
@@ -301,7 +304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sarissae",
@@ -375,7 +379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Linen Cuirass",
@@ -449,7 +454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bucephalus",
@@ -523,7 +529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Leonidas",
@@ -597,7 +604,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nemesis",
@@ -671,7 +679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spartan Lakonian",
@@ -745,7 +754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Muscle Cuirass",
@@ -819,7 +829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hoplon",
@@ -893,7 +904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Herakles",
@@ -967,7 +979,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zeus",
@@ -1041,7 +1054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kopis",
@@ -1115,7 +1129,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Greaves",
@@ -1189,7 +1204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Belt of Hippolyte",
@@ -1263,7 +1279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Milo of Croton",
@@ -1337,7 +1354,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pythagoras",
@@ -1411,7 +1429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ropalo",
@@ -1485,7 +1504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Liontari",
@@ -1559,7 +1579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kotynos",
@@ -1633,7 +1654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Oda Nobunaga",
@@ -1707,7 +1729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Izanagi",
@@ -1781,7 +1804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yumi",
@@ -1855,7 +1879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Do",
@@ -1929,7 +1954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kyudo",
@@ -2003,7 +2029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nakano Takeko",
@@ -2077,7 +2104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bokken",
@@ -2151,7 +2179,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Amaterasu",
@@ -2225,7 +2254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gorin no Sho",
@@ -2299,7 +2329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Naginata",
@@ -2373,7 +2404,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mempo",
@@ -2447,7 +2479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kemuri-Kona",
@@ -2521,7 +2554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Saito Musashibo Benkei",
@@ -2595,7 +2629,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bishamon-ten",
@@ -2669,7 +2704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Katana",
@@ -2743,7 +2779,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kimono",
@@ -2817,7 +2854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Haidate",
@@ -2891,7 +2929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Uma",
@@ -2965,7 +3004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Miyamoto Musashi",
@@ -3039,7 +3079,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: "-1"
+    grid_4_3: "-1",
+    analects: ""
   },
   {
     name: "Musha-Shuyo",
@@ -3113,7 +3154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ninja",
@@ -3187,7 +3229,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Izanami",
@@ -3261,7 +3304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ninja-to",
@@ -3335,7 +3379,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shinobo Shozoku",
@@ -3409,7 +3454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shuriken",
@@ -3483,7 +3529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Canute the Great",
@@ -3557,7 +3604,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Odin",
@@ -3631,7 +3679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Langseax",
@@ -3705,7 +3754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Healsbeorgs",
@@ -3779,7 +3829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Crown of England",
@@ -3853,7 +3904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Harald Hardrada",
@@ -3927,7 +3979,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Beowulf",
@@ -4001,7 +4054,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Thor",
@@ -4075,7 +4129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Byrnies",
@@ -4149,7 +4204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Langox",
@@ -4223,7 +4279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hjelm",
@@ -4297,7 +4354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mjollnir",
@@ -4371,7 +4429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Freydis Eiriksdottir",
@@ -4445,7 +4504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tyr",
@@ -4519,7 +4579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Grendel",
@@ -4593,7 +4654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Skegox Francisca",
@@ -4667,7 +4729,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Skegox Francisca",
@@ -4741,7 +4804,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Leiter",
@@ -4815,7 +4879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Elhaz Rune",
@@ -4889,7 +4954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Grettir the Strong",
@@ -4963,7 +5029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Loki",
@@ -5037,7 +5104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dane Axe",
@@ -5111,7 +5179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bear Sark",
@@ -5185,7 +5254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Berserkergangr",
@@ -5259,7 +5329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Julius Caesar",
@@ -5333,7 +5404,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jupiter",
@@ -5407,7 +5479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gladius",
@@ -5481,7 +5554,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Skjold",
@@ -5555,7 +5629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sverd",
@@ -5629,7 +5704,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Caesar's Greaves",
@@ -5703,7 +5779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "De Bello Gallico",
@@ -5777,7 +5854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Amazonia",
@@ -5851,7 +5929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mercury",
@@ -5925,7 +6004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pugio",
@@ -5999,7 +6079,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pteryges",
@@ -6073,7 +6154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Scutulum",
@@ -6147,7 +6229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Marcus Claudius Marcellus",
@@ -6221,7 +6304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Apollo",
@@ -6295,7 +6379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pilum",
@@ -6369,7 +6454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Loricae Segmentata",
@@ -6443,7 +6529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Disciplina",
@@ -6517,7 +6604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maximinus",
@@ -6591,7 +6679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pluto",
@@ -6665,7 +6754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spatha",
@@ -6739,7 +6829,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cassis",
@@ -6813,7 +6904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Scutum",
@@ -6887,7 +6979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Achilles",
@@ -6961,7 +7054,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Thetis",
@@ -7035,7 +7129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sarissa",
@@ -7109,7 +7204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Armor of Hephaestus",
@@ -7183,7 +7279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shield of Hephaestus",
@@ -7257,7 +7354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spartacus",
@@ -7331,7 +7429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blossius of Cumae",
@@ -7405,7 +7504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sica",
@@ -7479,7 +7579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocrea",
@@ -7553,7 +7654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Parma",
@@ -7627,7 +7729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alfred the Great",
@@ -7701,7 +7804,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ealswith",
@@ -7775,7 +7879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Longsword",
@@ -7849,7 +7954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gambeson",
@@ -7923,7 +8029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Targe",
@@ -7997,7 +8104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Boudicca",
@@ -8071,7 +8179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rhiannon",
@@ -8145,7 +8254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rhiannon",
@@ -8219,7 +8329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Goaf",
@@ -8293,7 +8404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bratt",
@@ -8367,7 +8479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Carpat",
@@ -8441,7 +8554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "King Arthur",
@@ -8515,7 +8629,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lady of the Lake",
@@ -8589,7 +8704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Excalibur",
@@ -8663,7 +8779,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chainmail Shirt",
@@ -8737,7 +8854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Merlin the Wise",
@@ -8811,7 +8929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Richard the Lionheart",
@@ -8885,7 +9004,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Richard the Lionheart",
@@ -8959,7 +9079,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bernegnaria",
@@ -9033,7 +9154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Greatsword",
@@ -9107,7 +9229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Full Mail Hauberk",
@@ -9181,7 +9304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Full Mail Hauberk",
@@ -9255,7 +9379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Full Mail Hauberk",
@@ -9329,7 +9454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Full Mail Hauberk",
@@ -9403,7 +9529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chivalry",
@@ -9477,7 +9604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Robin Hood",
@@ -9551,7 +9679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maid Marion",
@@ -9625,7 +9754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Long Bow",
@@ -9699,7 +9829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Leather Jerkin",
@@ -9773,7 +9904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Band of Merry Men",
@@ -9847,7 +9979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Guan Yu",
@@ -9921,7 +10054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+1"
+    grid_4_3: "+1",
+    analects: ""
   },
   {
     name: "Guan Di",
@@ -9995,7 +10129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qing Long Yan Yue Dao",
@@ -10069,7 +10204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jlang Jun Zhil Kai",
@@ -10143,7 +10279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tao Yuan San Jie Yi",
@@ -10217,7 +10354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hua Mulan",
@@ -10291,7 +10429,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hua Mulan",
@@ -10365,7 +10504,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zhu Rong",
@@ -10439,7 +10579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qiang Spear",
@@ -10513,7 +10654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zhou",
@@ -10587,7 +10729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sheng Kai De Mu Lan Hua",
@@ -10661,7 +10804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jei the Tyrant",
@@ -10735,7 +10879,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "+0",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yeng Wang Ye",
@@ -10809,7 +10954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yue",
@@ -10883,7 +11029,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bo Xion Jla",
@@ -10957,7 +11104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qing Gong Palace",
@@ -11031,7 +11179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sun Tzu",
@@ -11105,7 +11254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: "+0"
+    grid_4_3: "+0",
+    analects: ""
   },
   {
     name: "Yu Huang Shang Di",
@@ -11179,7 +11329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nu Gong",
@@ -11253,7 +11404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shan Wen Jia",
@@ -11327,7 +11479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bing Fa",
@@ -11401,7 +11554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yueh Fei",
@@ -11475,7 +11629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "+1",
     grid_4_2: "+0",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jin Cheng Bao Guo",
@@ -11549,7 +11704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dao",
@@ -11623,7 +11779,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hu Xion Jia",
@@ -11697,7 +11854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ba Duan Jin",
@@ -11771,7 +11929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cleopatra VII",
@@ -11845,7 +12004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "+2",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ast",
@@ -11919,7 +12079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "B'gsw",
@@ -11993,7 +12154,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Golden Corselet",
@@ -12067,7 +12229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Heqa and Was Scepters",
@@ -12141,7 +12304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Horemheb the Restorer",
@@ -12215,7 +12379,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Horus",
@@ -12289,7 +12454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khopesh",
@@ -12363,7 +12529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Man-High Shield",
@@ -12437,7 +12604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Udjat Eye",
@@ -12511,7 +12679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ramses II",
@@ -12585,7 +12754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ra",
@@ -12659,7 +12829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Minb",
@@ -12733,7 +12904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ikm''T",
@@ -12807,7 +12979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wereryet",
@@ -12881,7 +13054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Seti I",
@@ -12955,7 +13129,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Osiris",
@@ -13029,7 +13204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hornbow",
@@ -13103,7 +13279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khepresh",
@@ -13177,7 +13354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Reu Nu Pert Em Hru",
@@ -13251,7 +13429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Srqt. The Scorpion King",
@@ -13325,7 +13504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khnum",
@@ -13399,7 +13579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nsywt",
@@ -13473,7 +13654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nsywt",
@@ -13547,7 +13729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ikm Mskw",
@@ -13621,7 +13804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mace of the Scorpion King",
@@ -13695,7 +13879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Attila the Hun",
@@ -13769,7 +13954,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nemere",
@@ -13843,7 +14029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sword of Mars",
@@ -13917,7 +14104,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Duugla",
@@ -13991,7 +14179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gäitäy Geprech",
@@ -14065,7 +14254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Genghis Khan",
@@ -14139,7 +14329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gengis Khan",
@@ -14213,7 +14404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Koekki Moengke Tengri",
@@ -14287,7 +14479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alman Sukh",
@@ -14361,7 +14554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khurim",
@@ -14435,7 +14629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zhad",
@@ -14509,7 +14704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khutulun",
@@ -14583,7 +14779,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Burqan-Qaldun",
@@ -14657,7 +14854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khutga",
@@ -14731,7 +14929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gutal",
@@ -14805,7 +15004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "100 Aduu Bootsoo",
@@ -14879,7 +15079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kublai Khan",
@@ -14953,7 +15154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Xanadu",
@@ -15027,7 +15229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tomor Scimitar",
@@ -15101,7 +15304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tsamts Torgo",
@@ -15175,7 +15379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Num Tom",
@@ -15249,7 +15454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Subedei",
@@ -15323,7 +15529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yeke Mongghol Ulus",
@@ -15397,7 +15604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Num Mor",
@@ -15471,7 +15679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khatangu",
@@ -15545,7 +15754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mangudai Steed",
@@ -15619,7 +15829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Charlemagne",
@@ -15693,7 +15904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pape Hadrien Ier",
@@ -15767,7 +15979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Épée Carolingienne",
@@ -15841,7 +16054,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bouclier Carolingien",
@@ -15915,7 +16129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Couronne Impériale",
@@ -15989,7 +16204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Charles Martel",
@@ -16063,7 +16279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Saint Boniface",
@@ -16137,7 +16354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "L'Épée aux Cinq Croix",
@@ -16211,7 +16429,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Broigne d'Écailles",
@@ -16285,7 +16504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Broigne d'Écailles",
@@ -16359,7 +16579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Broigne d'Écailles",
@@ -16433,7 +16654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Marteau de Cavalerie",
@@ -16507,7 +16729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Marteau de Cavalerie",
@@ -16581,7 +16804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Roland le Paladin",
@@ -16655,7 +16879,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Code du Paladin",
@@ -16729,7 +16954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Durendal",
@@ -16803,7 +17029,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cotte de Mailles du Paladin",
@@ -16877,7 +17104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Olifant",
@@ -16951,7 +17179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sainte Jeanne d'Arc",
@@ -17025,7 +17254,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Archange Michel",
@@ -17099,7 +17329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Épée de Martel",
@@ -17173,7 +17404,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blanc Harnois",
@@ -17247,7 +17479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blanc Harnois",
@@ -17321,7 +17554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blanc Harnois",
@@ -17395,7 +17629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sainte Bannière",
@@ -17469,7 +17704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vercingétorix",
@@ -17543,7 +17779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Camulos",
@@ -17617,7 +17854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Épée Celtique",
@@ -17691,7 +17929,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bouclier Celtique",
@@ -17765,7 +18004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Harnachement",
@@ -17839,7 +18079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alarich",
@@ -17913,7 +18154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Heimdal",
@@ -17987,7 +18229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ger",
@@ -18061,7 +18304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wolfsfell",
@@ -18135,7 +18379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Salarische Tor",
@@ -18209,7 +18454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Arminus",
@@ -18283,7 +18529,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tiwaz",
@@ -18357,7 +18604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aaminius Standarte",
@@ -18431,7 +18679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rüstung der Römisches Hilfstruppen",
@@ -18505,7 +18754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Varusschlacht",
@@ -18579,7 +18829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fredegunde",
@@ -18653,7 +18904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Freya",
@@ -18727,7 +18979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vergifteter Dolch",
@@ -18801,7 +19054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Steppumhang",
@@ -18875,7 +19129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Schutzherrin der Meuchelmörder",
@@ -18949,7 +19204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Siegfried",
@@ -19023,7 +19279,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Krimhild",
@@ -19097,7 +19354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Balmung",
@@ -19171,7 +19429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tarnkappe",
@@ -19245,7 +19504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bad im Drachenblut",
@@ -19319,7 +19579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Theoderich der Grosse",
@@ -19393,7 +19654,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Boethius",
@@ -19467,7 +19729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kriegsaxt",
@@ -19541,7 +19804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lorica Hamata",
@@ -19615,7 +19879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Magister Militum",
@@ -19689,7 +19954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Makataimeshekiakiak (Black Hawk)",
@@ -19763,7 +20029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Íŋyaŋ",
@@ -19837,7 +20104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Íŋyaŋ Wahúkeza",
@@ -19911,7 +20179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wakté Waháčhaŋka",
@@ -19985,7 +20254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Okíčhize Čhaŋnúŋpa",
@@ -20059,7 +20329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maĥpíya Lúta (Red Cloud)",
@@ -20133,7 +20404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wí",
@@ -20207,7 +20479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Čhehúpahu Čhaŋksá",
@@ -20281,7 +20554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Napé Lúta Waháčhaŋka",
@@ -20355,7 +20629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Itĥáŋčhaŋ Tĥawápĥaha",
@@ -20429,7 +20704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tĥašúŋka Witkó (Crazy Horse)",
@@ -20503,7 +20779,8 @@ export const cards: Card[] = [
     grid_3_3: "-2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wakíŋyaŋ Šúŋkawakĥaŋ",
@@ -20577,7 +20854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Itázipa Blaská",
@@ -20651,7 +20929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wakíŋyaŋ Waháčhaŋka",
@@ -20725,7 +21004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Heyókĥa",
@@ -20799,7 +21079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tĥatĥaŋka Íyotake (Sitting Bull)",
@@ -20873,7 +21154,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tĥatĥaŋka Íyotake (Sitting Bull)",
@@ -20947,7 +21229,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wakĥáŋ Tĥáŋka",
@@ -21021,7 +21304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Waŋhí Čhaŋpí",
@@ -21095,7 +21379,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wanáği Wačhípi Waháčhaŋka",
@@ -21169,7 +21454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wanáği Wačhípi",
@@ -21243,7 +21529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tecumtha (Tecumseh)",
@@ -21317,7 +21604,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Haŋbléčheyapi",
@@ -21391,7 +21679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Íŋyaŋmila",
@@ -21465,7 +21754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mağážu Tĥokáheya Waháčhaŋka",
@@ -21539,7 +21829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wóphiye Wakĥáŋ",
@@ -21613,7 +21904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Calum III",
@@ -21687,7 +21979,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Naomh Màireid",
@@ -21761,7 +22054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Claidheamh-Catha dà-Làimhe",
@@ -21835,7 +22129,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ceannasg Máilleach",
@@ -21909,7 +22204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cùmhnant Briste",
@@ -21983,7 +22279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rob Ruadh MacGriogair",
@@ -22057,7 +22354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+2"
+    grid_4_3: "+2",
+    analects: ""
   },
   {
     name: "Ar-a-mach Cràbhach",
@@ -22131,7 +22429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Claidheamh Leathann",
@@ -22205,7 +22504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Targaid Gháidhealach",
@@ -22279,7 +22579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bonaid Trì-Iteagan",
@@ -22353,7 +22654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Raibeart Brus",
@@ -22427,7 +22729,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "-1"
+    grid_4_3: "-1",
+    analects: ""
   },
   {
     name: "Damhan-Allaidh Leantalach",
@@ -22501,7 +22804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tuagh-Chatha Albannach",
@@ -22575,7 +22879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Clogaid Phembridge",
@@ -22649,7 +22954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Crùn na h-alba",
@@ -22723,7 +23029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sgàthach an Eilein Sgiathanaich",
@@ -22797,7 +23104,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "+1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Iombhas Forasna",
@@ -22871,7 +23179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tuisg na Grèige",
@@ -22945,7 +23254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Caithbheart-Chuim Leathrach",
@@ -23019,7 +23329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Craobh nan Clach",
@@ -23093,7 +23404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Uilleam Uallas",
@@ -23167,7 +23479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-2",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cluaran na h-Alba",
@@ -23241,7 +23554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Claidheamh-mòr Gàidhealach",
@@ -23315,7 +23629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Caithbheart-Ruighe Leathrach",
@@ -23389,7 +23704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sporan",
@@ -23463,7 +23779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Benrig Medb",
@@ -23537,7 +23854,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anu",
@@ -23611,7 +23929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Slea Bladhmadh",
@@ -23685,7 +24004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Brat Derg",
@@ -23759,7 +24079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Donn Cuailnge",
@@ -23833,7 +24154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Brian Boru",
@@ -23907,7 +24229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ard Ri",
@@ -23981,7 +24304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cliabh Mor",
@@ -24055,7 +24379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maille na Lub",
@@ -24129,7 +24454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Culain Tairbh",
@@ -24203,7 +24529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cu Chulainn",
@@ -24277,7 +24604,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mor Rioghain",
@@ -24351,7 +24679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gae Bolg",
@@ -24425,7 +24754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Duban",
@@ -24499,7 +24829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bas Sheasamhach",
@@ -24573,7 +24904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Donal McCathaigh",
@@ -24647,7 +24979,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dli Breithim",
@@ -24721,7 +25054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Slea le Scian le Cuma Duilleog",
@@ -24795,7 +25129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Torc Orga",
@@ -24869,7 +25204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Siuloir na Cosach Croise",
@@ -24943,7 +25279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Finn MacCumhaill",
@@ -25017,7 +25354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "An Bradan Feasa",
@@ -25091,7 +25429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mac an Luin",
@@ -25165,7 +25504,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sgisth Gailbhinn",
@@ -25239,7 +25579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bran Agus Sceolang",
@@ -25313,7 +25654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ariki Te Wherowhero",
@@ -25387,7 +25729,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Treaty of Waitangi",
@@ -25461,7 +25804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Taiaha",
@@ -25535,7 +25879,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Taiaha",
@@ -25609,7 +25954,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pa",
@@ -25683,7 +26029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hei-Tiki",
@@ -25757,7 +26104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hei-Tiki",
@@ -25831,7 +26179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hatupatu",
@@ -25905,7 +26254,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tane Mahuta",
@@ -25979,7 +26329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mere",
@@ -26053,7 +26404,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "-1",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Te Kohatu-O-Hatupatu",
@@ -26127,7 +26479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Karakia",
@@ -26201,7 +26554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kupe",
@@ -26275,7 +26629,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tangaroa",
@@ -26349,7 +26704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hauhau-te-Rangi",
@@ -26423,7 +26779,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Moko",
@@ -26497,7 +26854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Moko",
@@ -26571,7 +26929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Waka",
@@ -26645,7 +27004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maui Tikitiki",
@@ -26719,7 +27079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tu-Matauenga",
@@ -26793,7 +27154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Manai Ikalanai",
@@ -26867,7 +27229,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kahu Kiwi",
@@ -26941,7 +27304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mana",
@@ -27015,7 +27379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Te Raupraha",
@@ -27089,7 +27454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ranga-nui Me Papa-tu-a-Nuku",
@@ -27163,7 +27529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kotiate",
@@ -27237,7 +27604,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kotiate",
@@ -27311,7 +27679,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Haka",
@@ -27385,7 +27754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tapu",
@@ -27459,7 +27829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Apranik",
@@ -27533,7 +27904,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anahita",
@@ -27607,7 +27979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akinaka",
@@ -27681,7 +28054,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tiara",
@@ -27755,7 +28129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jang O Goriz",
@@ -27829,7 +28204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cyrus The Great",
@@ -27903,7 +28279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mardukh",
@@ -27977,7 +28354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kamea-e Helal-e Irani",
@@ -28051,7 +28429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spara",
@@ -28125,7 +28504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Arabe Haye Darrande",
@@ -28199,7 +28579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Darius the Great",
@@ -28273,7 +28654,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ahura-mazda",
@@ -28347,7 +28729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Neyze-ye Darrande",
@@ -28421,7 +28804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gerron",
@@ -28495,7 +28879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Amrtaka",
@@ -28569,7 +28954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mithridies VI The Great",
@@ -28643,7 +29029,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dionysus",
@@ -28717,7 +29104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Palta",
@@ -28791,7 +29179,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Palta",
@@ -28865,7 +29254,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Griwban",
@@ -28939,7 +29329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mitray-i",
@@ -29013,7 +29404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shapur I",
@@ -29087,7 +29479,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shapur I",
@@ -29161,7 +29554,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zartosht",
@@ -29235,7 +29629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zartosht",
@@ -29309,7 +29704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kontos",
@@ -29383,7 +29779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kolah Khod-e Sasani",
@@ -29457,7 +29854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rhyton",
@@ -29531,7 +29929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Catherine The Great",
@@ -29605,7 +30004,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Voltaire",
@@ -29679,7 +30079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Voltaire",
@@ -29753,7 +30154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Polusablya",
@@ -29827,7 +30229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kirasa",
@@ -29901,7 +30304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Prosveschenniy Absolutism",
@@ -29975,7 +30379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ivan The Terrible",
@@ -30049,7 +30454,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anastasia Romanova Zakharyina",
@@ -30123,7 +30529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anastasia Romanova Zakharyina",
@@ -30197,7 +30604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shestoper",
@@ -30271,7 +30679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tyegilya",
@@ -30345,7 +30754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Oprichniki",
@@ -30419,7 +30829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Peter I The Great",
@@ -30493,7 +30904,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vozeshenniye Posolstovo",
@@ -30567,7 +30979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shpaga",
@@ -30641,7 +31054,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kolontar",
@@ -30715,7 +31129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rindi",
@@ -30789,7 +31204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Prinz Mikhail Skopin-Shuisky",
@@ -30863,7 +31279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Samozvantez Dmitry",
@@ -30937,7 +31354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Samozvantez Dmitry",
@@ -31011,7 +31429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Palash",
@@ -31085,7 +31504,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bakhterets",
@@ -31159,7 +31579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mechnik",
@@ -31233,7 +31654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Saint Alexander Nevsky",
@@ -31307,7 +31729,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Metropolitan Kyrillus",
@@ -31381,7 +31804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Metropolitan Kyrillus",
@@ -31455,7 +31879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chekan",
@@ -31529,7 +31954,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kol'chuga",
@@ -31603,7 +32029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shlem",
@@ -31677,7 +32104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Auitzotl",
@@ -31751,7 +32179,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+1"
+    grid_4_3: "+1",
+    analects: ""
   },
   {
     name: "Tlaloc",
@@ -31825,7 +32254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Atlatl",
@@ -31899,7 +32329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chimalli",
@@ -31973,7 +32404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mectal",
@@ -32047,7 +32479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cuitlahuac",
@@ -32121,7 +32554,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tezcatlipoca",
@@ -32195,7 +32629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tlacochtli",
@@ -32269,7 +32704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocelocolohtic",
@@ -32343,7 +32779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocelocolohtic",
@@ -32417,7 +32854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocelocolohtic",
@@ -32491,7 +32929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocelomeh",
@@ -32565,7 +33004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ocelomeh",
@@ -32639,7 +33079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Itzcoatl",
@@ -32713,7 +33154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Teyaotenyiliztli",
@@ -32787,7 +33229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Macuahuitl",
@@ -32861,7 +33304,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "-1"
+    grid_4_3: "-1",
+    analects: ""
   },
   {
     name: "Cuauhcuachimalli",
@@ -32935,7 +33379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cuauhcuachimalli",
@@ -33009,7 +33454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cuauhcuachimalli",
@@ -33083,7 +33529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Teponaztli",
@@ -33157,7 +33604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Moctezuma II",
@@ -33231,7 +33679,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Quetzalcoatl",
@@ -33305,7 +33754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tecpatl",
@@ -33379,7 +33829,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Copilli",
@@ -33453,7 +33904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tlimatli",
@@ -33527,7 +33979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tlacaelel",
@@ -33601,7 +34054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "-1"
+    grid_4_3: "-1",
+    analects: ""
   },
   {
     name: "Huitzilopochtli",
@@ -33675,7 +34129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tematlatl",
@@ -33749,7 +34204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tematlatl",
@@ -33823,7 +34279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ichcahuipilli",
@@ -33897,7 +34354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Xochivaovotl",
@@ -33971,7 +34429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hijikata Toshizo",
@@ -34045,7 +34504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kyokuchu-Hatto",
@@ -34119,7 +34579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Izuminokami-Kanesada",
@@ -34193,7 +34654,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Haori",
@@ -34267,7 +34729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ishida-Sanyaku",
@@ -34341,7 +34804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Minamoto no Yoshitsune",
@@ -34415,7 +34879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Genji",
@@ -34489,7 +34954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Usumidori",
@@ -34563,7 +35029,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akaitoodoshi-Yoroi",
@@ -34637,7 +35104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akaitoodoshi-Yoroi",
@@ -34711,7 +35179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akaitoodoshi-Yoroi",
@@ -34785,7 +35254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rikutosanryaku",
@@ -34859,7 +35329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sanada Nobushige",
@@ -34933,7 +35404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rokunmonsenmon",
@@ -35007,7 +35479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Muramasa",
@@ -35081,7 +35554,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akazonae",
@@ -35155,7 +35629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akazonae",
@@ -35229,7 +35704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Akazonae",
@@ -35303,7 +35779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sanadamaru",
@@ -35377,7 +35854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Takeda Shingen",
@@ -35451,7 +35929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Furinkazan",
@@ -35525,7 +36004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jin-Dachi",
@@ -35599,7 +36079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Touseigusoku",
@@ -35673,7 +36154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Touseigusoku",
@@ -35747,7 +36229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Touseigusoku",
@@ -35821,7 +36304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gunpai",
@@ -35895,7 +36379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Uesugi Kenshin",
@@ -35969,7 +36454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kawanakajima",
@@ -36043,7 +36529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Azukinagamitsu",
@@ -36117,7 +36604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kusubekawasugakeodoshi",
@@ -36191,7 +36679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kusubekawasugakeodoshi",
@@ -36265,7 +36754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kusubekawasugakeodoshi",
@@ -36339,7 +36829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hata Bi",
@@ -36413,7 +36904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Amr ibn al'Aas",
@@ -36487,7 +36979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Masjid ahl ar-Rayah",
@@ -36561,7 +37054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ras al Asad",
@@ -36635,7 +37129,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Al Derba",
@@ -36709,7 +37204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Reaaia Elahiia",
@@ -36783,7 +37279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Harun al-Rashid",
@@ -36857,7 +37354,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Al-Khayzuran",
@@ -36931,7 +37429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kaws",
@@ -37005,7 +37504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ran",
@@ -37079,7 +37579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alf Layla wa-Layla",
@@ -37153,7 +37654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maowvia",
@@ -37227,7 +37729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maowvia",
@@ -37301,7 +37804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alnabi Mosa",
@@ -37375,7 +37879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alnabi Mosa",
@@ -37449,7 +37954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sahm",
@@ -37523,7 +38029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sahm",
@@ -37597,7 +38104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gabal el Taur",
@@ -37671,7 +38179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mesbah",
@@ -37745,7 +38254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mesbah",
@@ -37819,7 +38329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Salah ad-Din",
@@ -37893,7 +38404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Al Madina al Mokadassa",
@@ -37967,7 +38479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Saif Damashki",
@@ -38041,7 +38554,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bargustuwan",
@@ -38115,7 +38629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khaimat Hemaya Men Alraml",
@@ -38189,7 +38704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tariq ibn Ziyad",
@@ -38263,7 +38779,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hadis Kaiim",
@@ -38337,7 +38854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Balltat Harb",
@@ -38411,7 +38929,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khauza",
@@ -38485,7 +39004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jabal Tariq",
@@ -38559,7 +39079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Carlos V",
@@ -38633,7 +39154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mercurino Gattinara",
@@ -38707,7 +39229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mercurino Gattinara",
@@ -38781,7 +39304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Albarda Espanola",
@@ -38855,7 +39379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Escudo de Carlos V",
@@ -38929,7 +39454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ballestero Vasco",
@@ -39003,7 +39529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "El Cid",
@@ -39077,7 +39604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Santiago Matamoros",
@@ -39151,7 +39679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Santiago Matamoros",
@@ -39225,7 +39754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tizona y Colada",
@@ -39299,7 +39829,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cota Corta",
@@ -39373,7 +39904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Babieca",
@@ -39447,7 +39979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "El Gran Capitan",
@@ -39521,7 +40054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vasallo de la Reina",
@@ -39595,7 +40129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pica de Infante",
@@ -39669,7 +40204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Armadura Completa",
@@ -39743,7 +40279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Formacion de Piqueros",
@@ -39817,7 +40354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hernan Cortes",
@@ -39891,7 +40429,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "La Malinche",
@@ -39965,7 +40504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Arcabuz",
@@ -40039,7 +40579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hombreras",
@@ -40113,7 +40654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Oro Azteca",
@@ -40187,7 +40729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Isabella I of Castile",
@@ -40261,7 +40804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fernando II de Aragon",
@@ -40335,7 +40879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fernando II de Aragon",
@@ -40409,7 +40954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ropera Toledana",
@@ -40483,7 +41029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fervor Religioso",
@@ -40557,7 +41104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "La Inquisicion Espanola",
@@ -40631,7 +41179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cao Cao",
@@ -40705,7 +41254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+0"
+    grid_4_3: "+0",
+    analects: ""
   },
   {
     name: "Wei Guo",
@@ -40779,7 +41329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yi Tian Dao",
@@ -40853,7 +41404,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Guandu Hu Cheng He",
@@ -40927,7 +41479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jue Ying",
@@ -41001,7 +41554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lu Bu",
@@ -41075,7 +41629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+1"
+    grid_4_3: "+1",
+    analects: ""
   },
   {
     name: "Diao Chan",
@@ -41149,7 +41704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Diao Chan",
@@ -41223,7 +41779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ji",
@@ -41297,7 +41854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shi Tou Kou",
@@ -41371,7 +41929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chi Tu Ma",
@@ -41445,7 +42004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ma Chao",
@@ -41519,7 +42079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wu Hu",
@@ -41593,7 +42154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shan Dian Mao",
@@ -41667,7 +42229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yin Tou Hui",
@@ -41741,7 +42304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Biao Qi Jiangjun",
@@ -41815,7 +42379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Biao Qi Jiangjun",
@@ -41889,7 +42454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zhang Fei",
@@ -41963,7 +42529,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "+1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chang Ban Po",
@@ -42037,7 +42604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ba Bian She Mao",
@@ -42111,7 +42679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tie Xia Bi Hu Jia",
@@ -42185,7 +42754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lu Wei",
@@ -42259,7 +42829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zhang Jiao",
@@ -42333,7 +42904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: "-1"
+    grid_4_3: "-1",
+    analects: ""
   },
   {
     name: "Zhang Jiao",
@@ -42407,7 +42979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: "+1"
+    grid_4_3: "+1",
+    analects: ""
   },
   {
     name: "Huang Lao Jun",
@@ -42481,7 +43054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tai Chi Gun",
@@ -42555,7 +43129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tai Chi Gun",
@@ -42629,7 +43204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tie Chen Shan Qi Gong",
@@ -42703,7 +43279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Huang Jin Zhi Luan",
@@ -42777,7 +43354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anne Bonney",
@@ -42851,7 +43429,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anne Bonney",
@@ -42925,7 +43504,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anne Bonney",
@@ -42999,7 +43579,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Anne Bonney",
@@ -43073,7 +43654,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Calico Jack Rackham",
@@ -43147,7 +43729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Calico Jack Rackham",
@@ -43221,7 +43804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Calico Jack Rackham",
@@ -43295,7 +43879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Calico Jack Rackham",
@@ -43369,7 +43954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Flintlock Pistol",
@@ -43443,7 +44029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Flintlock Pistol",
@@ -43517,7 +44104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pleading the Belly",
@@ -43591,7 +44179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pleading the Belly",
@@ -43665,7 +44254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ye Dirty Swabs",
@@ -43739,7 +44329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ye Dirty Swabs",
@@ -43813,7 +44404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Black Bart",
@@ -43887,7 +44479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Black Bart",
@@ -43961,7 +44554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Davy Jones' Locker",
@@ -44035,7 +44629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Davy Jones' Locker",
@@ -44109,7 +44704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Small Sword",
@@ -44183,7 +44779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Small Sword",
@@ -44257,7 +44854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Plumed Hat",
@@ -44331,7 +44929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Plumed Hat",
@@ -44405,7 +45004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "A Straight Ship",
@@ -44479,7 +45079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "A straight Ship",
@@ -44553,7 +45154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blackbeard",
@@ -44627,7 +45229,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blackbeard",
@@ -44701,7 +45304,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blackbeard's Jolly Roger",
@@ -44775,7 +45379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Blackbeard's Jolly Roger",
@@ -44849,7 +45454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pair o' Cutlasses",
@@ -44923,7 +45529,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pair o' Cutlasses",
@@ -44997,7 +45604,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fearsome Reputation",
@@ -45071,7 +45679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fearsome Reputation",
@@ -45145,7 +45754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pieces of Eight",
@@ -45219,7 +45829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pieces of Eight",
@@ -45293,7 +45904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pieces of Eight",
@@ -45367,7 +45979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pieces of Eight",
@@ -45441,7 +46054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Grainne Ni Mhaille",
@@ -45515,7 +46129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Grainne Ni Mhaille",
@@ -45589,7 +46204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pirate Legacy",
@@ -45663,7 +46279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pirate Legacy",
@@ -45737,7 +46354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Boarding Axe",
@@ -45811,7 +46429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Boarding Axe",
@@ -45885,7 +46504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Articles of Interrogatory",
@@ -45959,7 +46579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Articles of Interrogatory",
@@ -46033,7 +46654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pirate Stronghold",
@@ -46107,7 +46729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pirate Stronghold",
@@ -46181,7 +46804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sir Francis Drake",
@@ -46255,7 +46879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sir Francis Drake",
@@ -46329,7 +46954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Good Queen Bess",
@@ -46403,7 +47029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Good Queen Bess",
@@ -46477,7 +47104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Good Queen Bess",
@@ -46551,7 +47179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Good Queen Bess",
@@ -46625,7 +47254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Swept-Hilt Rapier",
@@ -46699,7 +47329,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Swept-Hilt Rapier",
@@ -46773,7 +47404,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "El Draco",
@@ -46847,7 +47479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "El Draco",
@@ -46921,7 +47554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Letter of Marque",
@@ -46995,7 +47629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Letter of Marque",
@@ -47069,7 +47704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Burebista",
@@ -47143,7 +47779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zamolxis",
@@ -47217,7 +47854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zamolxis",
@@ -47291,7 +47929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Falx",
@@ -47365,7 +48004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cascã Dacicã",
@@ -47439,7 +48079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kogaion",
@@ -47513,7 +48154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Micheal the Brave",
@@ -47587,7 +48229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Liga Sfîntã",
@@ -47661,7 +48304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Buzdugan",
@@ -47735,7 +48379,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Buzunare La Armurã",
@@ -47809,7 +48454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Slujbã Valahã",
@@ -47883,7 +48529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mircea the Old",
@@ -47957,7 +48604,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mânãstirea Cozia",
@@ -48031,7 +48679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Buzdugan Cu Crampoane",
@@ -48105,7 +48754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Placã Armurã Spate",
@@ -48179,7 +48829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tratatul De La Nicopole",
@@ -48253,7 +48904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Stephen the Great",
@@ -48327,7 +48979,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Papa Sixtus Al IV-Lea",
@@ -48401,7 +49054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Papa Sixtus Al IV-Lea",
@@ -48475,7 +49129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sabie Pentru O Mânã 'I Jumãtate",
@@ -48549,7 +49204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mãnu°i De Armurã",
@@ -48623,7 +49279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Athleta Christi",
@@ -48697,7 +49354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vlad Tepes",
@@ -48771,7 +49429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cupa de Aur",
@@ -48845,7 +49504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sabie Puternica",
@@ -48919,7 +49579,8 @@ export const cards: Card[] = [
     grid_3_3: "-2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pieptarul Lui Vlad Dracul",
@@ -48993,7 +49654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cetatea Poenari",
@@ -49067,7 +49729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Beyazid I, The Thunderbolt",
@@ -49141,7 +49804,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Konstantinya",
@@ -49215,7 +49879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mech",
@@ -49289,7 +49954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tura",
@@ -49363,7 +50029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Savasi Nicopolis",
@@ -49437,7 +50104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mehmed II, The Conqueror",
@@ -49511,7 +50179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hagia Sophia",
@@ -49585,7 +50254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Buzdovan",
@@ -49659,7 +50329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rumeli Hisari",
@@ -49733,7 +50404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mektup In Komutan",
@@ -49807,7 +50479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Murad IV, The Cruel",
@@ -49881,7 +50554,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kosem Sultan",
@@ -49955,7 +50629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kösem Sultan",
@@ -50029,7 +50704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Topuz",
@@ -50103,7 +50779,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yasuk",
@@ -50177,7 +50854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Söczügŵün",
@@ -50251,7 +50929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Selim I, The Brave",
@@ -50325,7 +51004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qubbat Al-Nabi",
@@ -50399,7 +51079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qubbat Al-Nabi",
@@ -50473,7 +51154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kargi",
@@ -50547,7 +51229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Silah Iman",
@@ -50621,7 +51304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Khadim Ul Haremeyn",
@@ -50695,7 +51379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Suleiman I, The Magnificent",
@@ -50769,7 +51454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Roxelana",
@@ -50843,7 +51529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Roxelana",
@@ -50917,7 +51604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yataghan",
@@ -50991,7 +51679,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yarik",
@@ -51065,7 +51754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Balyemez",
@@ -51139,7 +51829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Daniel Boone",
@@ -51213,7 +51904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hunter's Paradise",
@@ -51287,7 +51979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Crude Whittled Spear",
@@ -51361,7 +52054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Boonesborough",
@@ -51435,7 +52129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wilderness Road",
@@ -51509,7 +52204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hugh Glass",
@@ -51583,7 +52279,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fort Kiowa",
@@ -51657,7 +52354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Trapper's Knife",
@@ -51731,7 +52429,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bear Hide",
@@ -51805,7 +52504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ashley's Hundred",
@@ -51879,7 +52579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "James Beckwourth",
@@ -51953,7 +52654,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pine Leaf",
@@ -52027,7 +52729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tomahawk",
@@ -52101,7 +52804,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Deed of Emancipation",
@@ -52175,7 +52879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wanderlust",
@@ -52249,7 +52954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jim Bowie",
@@ -52323,7 +53029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Texas Revolution",
@@ -52397,7 +53104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bowie Knife",
@@ -52471,7 +53179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "The Alamo",
@@ -52545,7 +53254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "The Sandbar Fight",
@@ -52619,7 +53329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jim Bridger",
@@ -52693,7 +53404,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rocky Mountain Fur Company",
@@ -52767,7 +53479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Johnson's Army",
@@ -52841,7 +53554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Fort Bridger",
@@ -52915,7 +53629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tall Tales",
@@ -52989,7 +53704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Agamemnon",
@@ -53063,7 +53779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ifigenia",
@@ -53137,7 +53854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hilia Plia",
@@ -53211,7 +53929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mikinaikos Thorakas",
@@ -53285,7 +54004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ikos Ton Atridon",
@@ -53359,7 +54079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Menelaos",
@@ -53433,7 +54154,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Thigmeni Timi",
@@ -53507,7 +54229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Xifos",
@@ -53581,7 +54304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spartiatiko Polemiko Kranos",
@@ -53655,7 +54379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Orgi Tou Posidona",
@@ -53729,7 +54454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Orgi Tou Posidona",
@@ -53803,7 +54529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Odysseus",
@@ -53877,7 +54604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Athina",
@@ -53951,7 +54679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Athina",
@@ -54025,7 +54754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Toxou Tou Odissea",
@@ -54099,7 +54829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Magiko Votani",
@@ -54173,7 +54904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dourios Ippos",
@@ -54247,7 +54979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ajax",
@@ -54321,7 +55054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-2",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chiron",
@@ -54395,7 +55129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chiron",
@@ -54469,7 +55204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Petrini Maza",
@@ -54543,7 +55279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Megali Aspida",
@@ -54617,7 +55354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Propirgio Ton Axeon",
@@ -54691,7 +55429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Theseus",
@@ -54765,7 +55504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Asterionas",
@@ -54839,7 +55579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Klironomimena Opla",
@@ -54913,7 +55654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Klironomimena Opla",
@@ -54987,7 +55729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kaliva Tis Ekalis",
@@ -55061,7 +55804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Doro Tis Ariadnis",
@@ -55135,7 +55879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Barak",
@@ -55209,7 +55954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Devora",
@@ -55283,7 +56029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Herev Pifiyot",
@@ -55357,7 +56104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tahara'",
@@ -55431,7 +56179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kidon",
@@ -55505,7 +56254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "David",
@@ -55579,7 +56329,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Golyath",
@@ -55653,7 +56404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qela'",
@@ -55727,7 +56479,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maddai Sa'ul Hammelek",
@@ -55801,7 +56554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maddai Sa'ul Hammelek",
@@ -55875,7 +56629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Maddai Sa'ul Hammelek",
@@ -55949,7 +56704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "'Aron Ha'eduth",
@@ -56023,7 +56779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Joshua",
@@ -56097,7 +56854,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yereho",
@@ -56171,7 +56929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Herev",
@@ -56245,7 +57004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Magen",
@@ -56319,7 +57079,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Miswat Yehosua",
@@ -56393,7 +57154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Judah Maccabee",
@@ -56467,7 +57229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Qin'at Bêtĕkā",
@@ -56541,7 +57304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Herev Appolonius",
@@ -56615,7 +57379,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Siryôn",
@@ -56689,7 +57454,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hannûkâ",
@@ -56763,7 +57529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Samson",
@@ -56837,7 +57604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Delila",
@@ -56911,7 +57679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lehi-Hamor",
@@ -56985,7 +57754,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ketoneth",
@@ -57059,7 +57829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Se'ar-Ro's Simson",
@@ -57133,7 +57904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aeneas",
@@ -57207,7 +57979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Afroditi",
@@ -57281,7 +58054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Afroditi",
@@ -57355,7 +58129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dorata Me Mproutzini Ehmi",
@@ -57429,7 +58204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aristourgima Tou Ifestou",
@@ -57503,7 +58279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aristourgima Tou Ifestou",
@@ -57577,7 +58354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aristourgima Tou Ifestou",
@@ -57651,7 +58429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aristourgima Tou Ifestou",
@@ -57725,7 +58504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Aristourgima Tou Ifestou",
@@ -57799,7 +58579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Palladio",
@@ -57873,7 +58654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Brutus",
@@ -57947,7 +58729,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Artemis",
@@ -58021,7 +58804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Artemis",
@@ -58095,7 +58879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Mahera",
@@ -58169,7 +58954,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kranos Me Lofio",
@@ -58243,7 +59029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Petra Tou Londinou",
@@ -58317,7 +59104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hector",
@@ -58391,7 +59179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Stili Tis Trias",
@@ -58465,7 +59254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spathi Me Asimenia Lavi",
@@ -58539,7 +59329,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Zoni Tou Eanta",
@@ -58613,7 +59404,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Theiki Paremvasi",
@@ -58687,7 +59479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Paris",
@@ -58761,7 +59554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Eleni Tis Spartis",
@@ -58835,7 +59629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Dilitiriasmeno Velos",
@@ -58909,7 +59704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "X",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Xtipimeno Mproutzino Thorakio",
@@ -58983,7 +59779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Krisi Tou Pari",
@@ -59057,7 +59854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Priam",
@@ -59131,7 +59929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "+0",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ekavi",
@@ -59205,7 +60004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spathi Tis Trias",
@@ -59279,7 +60079,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tihi Tis Trias",
@@ -59353,7 +60154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cassandra",
@@ -59427,7 +60229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cassandra",
@@ -59501,7 +60304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Alexander III of Macedon",
@@ -59575,7 +60379,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Leonidas I of Sparta",
@@ -59649,7 +60454,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "+0",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Bushido",
@@ -59723,7 +60529,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Nobunaga",
@@ -59797,7 +60604,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Shinmen Takezo",
@@ -59871,7 +60679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Canute I of Denmark",
@@ -59945,7 +60754,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Geat King Beowulf",
@@ -60019,7 +60829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "-1",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gaius Julius",
@@ -60093,7 +60904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: "+0"
+    grid_4_3: "+0",
+    analects: ""
   },
   {
     name: "Mars",
@@ -60167,7 +60979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Spartacus of Thrace",
@@ -60241,7 +61054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hattori Hanzo",
@@ -60315,7 +61129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Herakles of Thebes",
@@ -60389,7 +61204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Naegling",
@@ -60463,7 +61279,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Clotho",
@@ -60537,7 +61354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lachesis",
@@ -60611,7 +61429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Atropos",
@@ -60685,7 +61504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Seth",
@@ -60759,7 +61579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Stone of Destiny",
@@ -60833,7 +61654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Chan Zhang",
@@ -60907,7 +61729,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "+0",
     grid_4_2: "+0",
-    grid_4_3: "+0"
+    grid_4_3: "+0",
+    analects: ""
   },
   {
     name: "Chan Zhang",
@@ -60981,7 +61804,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "+0",
     grid_4_2: "+0",
-    grid_4_3: "+0"
+    grid_4_3: "+0",
+    analects: ""
   },
   {
     name: "Batu Khan",
@@ -61055,7 +61879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "A'Phiob Mhor",
@@ -61129,7 +61954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "D'Artagnan",
@@ -61203,7 +62029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Allt A'Bhonnaich",
@@ -61277,7 +62104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Šspw",
@@ -61351,7 +62179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Donar-Eiche",
@@ -61425,7 +62254,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rapiere",
@@ -61499,7 +62329,8 @@ export const cards: Card[] = [
     grid_3_3: "+2",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "San Jie Gun",
@@ -61573,7 +62404,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Volkerwanderung",
@@ -61647,7 +62479,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Wakinyan",
@@ -61721,7 +62554,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tĥahé Hahúwanap'iŋ",
@@ -61795,7 +62629,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Si An Bhru",
@@ -61869,7 +62704,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Clairseach Bhoru",
@@ -61943,7 +62779,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Hawaiki",
@@ -62017,7 +62854,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Pou Whenua",
@@ -62091,7 +62929,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ostovany Khourosh",
@@ -62165,7 +63004,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Sagaris",
@@ -62239,7 +63079,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rasputin",
@@ -62313,7 +63154,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Rasputin",
@@ -62387,7 +63229,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Baba Yaga",
@@ -62461,7 +63304,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Baba Yaga",
@@ -62535,7 +63379,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Godfrey of Bouillon",
@@ -62609,7 +63454,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Gaiseric",
@@ -62683,7 +63529,8 @@ export const cards: Card[] = [
     grid_3_3: "-1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Liu Bei",
@@ -62757,7 +63604,8 @@ export const cards: Card[] = [
     grid_3_3: "+1",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Saif",
@@ -62831,7 +63679,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Jihad",
@@ -62905,7 +63754,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cuauhxicalli",
@@ -62979,7 +63829,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Cuauhxicalli",
@@ -63053,7 +63904,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Templo Mayor",
@@ -63127,7 +63979,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Reconquista",
@@ -63201,7 +64054,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tomas de Torquemada",
@@ -63275,7 +64129,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Tomas de Torquemada",
@@ -63349,7 +64204,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Xerxes",
@@ -63423,7 +64279,8 @@ export const cards: Card[] = [
     grid_3_3: "+0",
     grid_4_1: "-1",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kamikaze",
@@ -63497,7 +64354,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kremlin",
@@ -63571,7 +64429,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Confucius",
@@ -63645,7 +64504,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Lao Tzu",
@@ -63719,7 +64579,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Unicornio Cuerno",
@@ -63793,7 +64654,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Queen Anne's Revenge",
@@ -63867,7 +64729,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Queen Anne's Revenge",
@@ -63941,7 +64804,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Isla Tortuga",
@@ -64015,7 +64879,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Kilij",
@@ -64089,7 +64954,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Istanbul",
@@ -64163,7 +65029,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Ordin de Balaur",
@@ -64237,7 +65104,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Vlad II Dracul",
@@ -64311,7 +65179,8 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   },
   {
     name: "Yggdrassil",
@@ -64385,6 +65254,7 @@ export const cards: Card[] = [
     grid_3_3: "",
     grid_4_1: "",
     grid_4_2: "",
-    grid_4_3: ""
+    grid_4_3: "",
+    analects: ""
   }
 ];
