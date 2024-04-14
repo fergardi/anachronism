@@ -185,12 +185,12 @@
   </mat-sidenav>
   <mat-sidenav-content class="app-sidenav-content">
     <mat-toolbar class="app-sidenav-toolbar mat-elevation-z12" fxLayout="row" fxLayoutAlign="space-between center">
-      <div fxFlex="15" fxLayout="row" fxLayoutAlign="start center">
+      <div fxFlex="15" fxLayout="row" fxLayoutAlign="start center" class="left-button">
         <button mat-icon-button (click)="left.toggle()">
           <mat-icon color="primary" matBadge="{{ filteredCards().length }}/{{ cards.length }}" matBadgePosition="after" matBadgeOverlap="false" aria-hidden="false">filter_list</mat-icon>
         </button>
       </div>
-      <div fxFlex="40" fxFlex.lt-lg="70">
+      <div fxFlex="60" class="center-input">
         <div class="search-container">
           <form [formGroup]="search" class="input-centered">
             <mat-form-field appareance="outline">
@@ -211,7 +211,7 @@
           </form>
         </div>
       </div>
-      <div fxFlex="15" fxLayout="row" fxLayoutAlign="end center">
+      <div fxFlex="15" fxLayout="row" fxLayoutAlign="end center" class="right-button">
         <button mat-icon-button (click)="right.toggle()">
           <mat-icon color="primary" matBadge="{{notEmptyCards()}}/{{deck.length}}" matBadgePosition="before" matBadgeOverlap="false" aria-hidden="false">style</mat-icon>
         </button>

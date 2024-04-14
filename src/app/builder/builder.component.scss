@@ -82,6 +82,10 @@
 
     .app-sidenav-toolbar {
 
+      .left-button, .right-button {
+        z-index: 1;
+      }
+
       ::ng-deep .mat-badge-content {
         border-radius: 50px;
         width: auto;

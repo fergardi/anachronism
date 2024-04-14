@@ -10961,7 +10961,7 @@ export const cards: Card[] = [
     name: "Bing Fa",
     culture: ["Chinese"],
     type: "Special",
-    subtype: ["Scrolls"],
+    subtype: ["Tome"],
     initiative: 7,
     element: null,
     life: null,

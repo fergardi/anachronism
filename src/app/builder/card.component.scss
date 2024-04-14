@@ -1,10 +1,6 @@
 mat-card {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  height: 90vh;
-  max-width: 90vw;
-  overflow: hidden;
+  height: 95vh;
+  max-width: 95vw;
   box-shadow: none !important;
 
   img {
@@ -20,10 +16,6 @@ mat-card {
       border-top: 1px solid var(--primary-color);
       padding: 16px;
       color: var(--mat-card-subtitle-text-color);
-    }
-
-    & :last-child {
-      // align-self: flex-end;
     }
 
     ::ng-deep .mat-mdc-chip-action-label {

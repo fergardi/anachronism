@@ -1,6 +1,6 @@
-<mat-card tabindex="0">
+<mat-card tabindex="0" fxLayout="row" fxLayout.lt-md="column">
   <img mat-card-image [src]="'assets/cards/' + card.set + '_' + card.number + '.jpg'" [alt]="card.name" class="info-card">
-  <div class="card-information" fxShow fxHide.lt-md>
+  <div class="card-information">
     <mat-card-header fxLayout="row">
       <mat-card-title-group>
         <mat-card-title class="primary-color">{{ card.name.toUpperCase() }}</mat-card-title>
@@ -51,6 +51,7 @@
       <mat-chip highlighted color="warn"><mat-icon>swap_vert</mat-icon>{{ card.set }}</mat-chip>&nbsp;
       <mat-chip highlighted color="warn"><mat-icon>tag</mat-icon>{{ card.number }}</mat-chip>&nbsp;
     </mat-card-content>
+    <div fxFlex></div>
     <mat-card-actions fxLayout="row" fxLayoutAlign="end end">
       <button mat-flat-button color="primary" (click)="addCardToDeck(card, $event)">ADD TO DECK</button>
     </mat-card-actions>
