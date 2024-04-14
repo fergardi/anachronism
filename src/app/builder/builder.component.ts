@@ -141,7 +141,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
     private route: ActivatedRoute,
     private dialog: MatDialog,
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 900px)');
+    this.mobileQuery = media.matchMedia('(max-width: 960px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
 
