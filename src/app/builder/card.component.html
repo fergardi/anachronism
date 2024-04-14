@@ -12,16 +12,46 @@
       </button>
     </mat-card-header>
     <mat-card-content>
-      <mat-chip highlighted>{{ card.culture }}</mat-chip>&nbsp;
-      <mat-chip highlighted>{{ card.type }}</mat-chip>&nbsp;
-      <mat-chip highlighted>{{ card.subtype }}</mat-chip>&nbsp;
-      <mat-chip highlighted color="warn" *ngIf="card.element">{{ card.element }}</mat-chip>
+      <ng-container *ngFor="let culture of card.culture">
+        <mat-chip highlighted><mat-icon>flag</mat-icon>{{ culture }}</mat-chip>&nbsp;
+      </ng-container>
+      <mat-chip highlighted><mat-icon>text_fields</mat-icon>{{ card.type }}</mat-chip>&nbsp;
+      <ng-container *ngFor="let subtype of card.subtype">
+        <mat-chip highlighted><mat-icon>format_size</mat-icon>{{ subtype }}</mat-chip>&nbsp;
+      </ng-container>
+    </mat-card-content>
+    <mat-card-content>
+      <ng-container *ngIf="card.initiative">
+        <mat-chip highlighted color="accent"><mat-icon>balance</mat-icon>{{ card.initiative }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.life">
+        <mat-chip highlighted color="accent"><mat-icon>favorite</mat-icon>{{ card.life }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.speed">
+        <mat-chip highlighted color="accent"><mat-icon>hourglass_bottom</mat-icon>{{ card.speed }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.experience">
+        <mat-chip highlighted color="accent"><mat-icon>star</mat-icon>{{ card.experience }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.damage">
+        <mat-chip highlighted color="accent"><mat-icon>opacity</mat-icon>{{ card.damage }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.hands">
+        <mat-chip highlighted color="accent"><mat-icon>sign_language</mat-icon>{{ card.hands }}</mat-chip>&nbsp;
+      </ng-container>
+      <ng-container *ngIf="card.element">
+        <mat-chip highlighted color="accent"><mat-icon>park</mat-icon>{{ card.element }}</mat-chip>&nbsp;
+      </ng-container>
     </mat-card-content>
     <mat-card-content>{{ card.text }}</mat-card-content>
     <mat-card-content class="italic-font">{{ card.flavor }}</mat-card-content>
-    <mat-card-content><b>Analects:</b> {{ card.analects || '-' }}</mat-card-content>
+    <mat-card-content>Analects: {{ card.analects || '-' }}</mat-card-content>
     <mat-card-content class="italic-font">Illustrated by {{ card.artist }}</mat-card-content>
-    <mat-card-actions>
+    <mat-card-content>
+      <mat-chip highlighted color="warn"><mat-icon>swap_vert</mat-icon>{{ card.set }}</mat-chip>&nbsp;
+      <mat-chip highlighted color="warn"><mat-icon>tag</mat-icon>{{ card.number }}</mat-chip>&nbsp;
+    </mat-card-content>
+    <mat-card-actions fxLayout="row" fxLayoutAlign="end end">
       <button mat-flat-button color="primary" (click)="addCardToDeck(card, $event)">ADD TO DECK</button>
     </mat-card-actions>
   </div>

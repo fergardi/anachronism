@@ -145,9 +145,9 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
 
-    this.cultures = Array.from(new Set(this.cards.map(card => card.culture)));
+    this.cultures = Array.from(new Set(this.cards.map(card => card.culture).reduce((accumulator, culture) => accumulator.concat(culture, []))));
     this.types = Array.from(new Set(this.cards.map(card => card.type)));
-    this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype)));
+    this.subtypes = Array.from(new Set(this.cards.map(card => card.subtype).reduce((accumulator, subtype) => accumulator.concat(subtype, []))));
     this.elements = Array.from(new Set(this.cards.filter(card => card.element != null).map(card => card.element)));
     this.handsMin = this.cards.reduce((min, card) => card.hands != null && card.hands < min ? card.hands : min, 0);
     this.handsMax = this.cards.reduce((max, card) => card.hands != null && card.hands > max ? card.hands : max, 0);
@@ -304,12 +304,12 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
 
   filteredCards(): Card[] {
     return this.cards
-      .filter(card => card.name.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()) || card.text.toLowerCase().includes(this.search.get('query')?.value.toLowerCase()))
-      .filter(card => card.name.toLowerCase().includes(this.filters.get('name')?.value.toLowerCase()))
-      .filter(card => card.text.toLowerCase().includes(this.filters.get('text')?.value.toLowerCase()))
-      .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.includes(card.culture) : true)
+      .filter(card => card.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").includes(this.search.get('query')?.value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")) || card.text.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").includes(this.search.get('query')?.value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")))
+      .filter(card => card.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").includes(this.filters.get('name')?.value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")))
+      .filter(card => card.text.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "").includes(this.filters.get('text')?.value.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, "")))
+      .filter(card => this.filters.get('cultures')?.value.length > 0 ? this.filters.get('cultures')?.value.every((culture: string) => card.culture.includes(culture)) : true)
       .filter(card => this.filters.get('types')?.value.length > 0 ? this.filters.get('types')?.value.includes(card.type) : true)
-      .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.includes(card.subtype) : true)
+      .filter(card => this.filters.get('subtypes')?.value.length > 0 ? this.filters.get('subtypes')?.value.every((subtype: string) => card.subtype.includes(subtype)) : true)
       .filter(card => card.hands != null ? card.hands >= this.filters.get('handsMin')?.value : this.filters.get('handsMin')?.value == 0) // only include null values if the min is 0
       .filter(card => card.hands != null ? card.hands <= this.filters.get('handsMax')?.value : true)
       .filter(card => card.grid_1_1.toLowerCase().includes(this.filters.get('grid_1_1')?.value.toLowerCase()))
@@ -341,7 +341,7 @@ export class BuilderComponent implements AfterViewInit, OnDestroy {
       .filter(card => this.filters.get('isMultipleSpecial')?.value ? this.filters.get('isMultipleSpecial')?.value == card.multiple_specials : true)
       .filter(card => this.filters.get('isReveal')?.value ? this.filters.get('isReveal')?.value == card.reveal : true)
       .filter(card => this.filters.get('isAction')?.value ? this.filters.get('isAction')?.value == card.action : true)
-      .filter(card => this.filters.get('isRival')?.value ? this.filters.get('isRival')?.value == card.rivalry : true)
+      .filter(card => this.filters.get('isRivalry')?.value ? this.filters.get('isRivalry')?.value == card.rivalry : true)
       .filter(card => this.filters.get('isDiscard')?.value ? this.filters.get('isDiscard')?.value == card.discards : true)
       .filter(card => this.filters.get('sets')?.value.length > 0 ? this.filters.get('sets')?.value.includes(card.set) : true)
       ;

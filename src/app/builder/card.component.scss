@@ -26,6 +26,12 @@ mat-card {
       // align-self: flex-end;
     }
 
+    ::ng-deep .mat-mdc-chip-action-label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
   }
 
   mat-card-header {
